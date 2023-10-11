@@ -116,8 +116,8 @@ We encourage you to take a look at the following presentations to gain a better 
 | [AIM 2023 Video Presentation](https://youtu.be/PV9k3-N_bvc) | [OpenCAV Technical Discussion @ ARMLab CU-ICAR](https://youtu.be/xihFoUxU7EU) |
 | [<img src="Images/OpenCAV-AuE-Seminar.png" width="500">](https://youtu.be/bk7lJfD4H0s) | [<img src="Images/SMRDC-2023-Presentation.png" width="500">](https://youtu.be/R_GZ1LkMWGQ) |
 | [OpenCAV CUICAR AuE Seminar](https://youtu.be/bk7lJfD4H0s) | [SMRDC 2023 Finalist Pitch](https://youtu.be/R_GZ1LkMWGQ) |
-| [<img src="Images/MECC-2023-Presentation.png" width="500">](https://youtu.be/0yS1-RpqhcE) |  |
-| [MECC 2023 Video Presentation](https://youtu.be/0yS1-RpqhcE) |  |
+| [<img src="Images/MECC-2023-Presentation.png" width="500">](https://youtu.be/0yS1-RpqhcE) | [<img src="Images/IROS-2023-Presentation.png" width="500">](https://youtu.be/8jyCJUOaLaI) |
+| [MECC 2023 Video Presentation](https://youtu.be/0yS1-RpqhcE) | [IROS 2023 Presentation](https://youtu.be/8jyCJUOaLaI) |
 |                    |                     |
 
 ### Publications
@@ -189,6 +189,19 @@ primaryClass={cs.RO}
 }
 ```
 This work has been accepted at **2023 AACC/IFAC Modeling, Estimation and Control Conference (MECC).**
+
+#### [Multi-Agent Deep Reinforcement Learning for Cooperative and Competitive Autonomous Vehicles using AutoDRIVE Ecosystem](https://arxiv.org/abs/2309.10007)
+```bibtex
+@eprint{AutoDRIVE-MARL-2023,
+title={Multi-Agent Deep Reinforcement Learning for Cooperative and Competitive Autonomous Vehicles using AutoDRIVE Ecosystem}, 
+author={Tanmay Vilas Samak and Chinmay Vilas Samak and Venkat Krovi},
+year={2023},
+eprint={2309.10007},
+archivePrefix={arXiv},
+primaryClass={cs.RO}
+}
+```
+This work has been accepted as Multi-Agent Dynamic Games (MAD-Games) Workshop paper at **2023 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS).**
 
 ### Technical Reports
 
