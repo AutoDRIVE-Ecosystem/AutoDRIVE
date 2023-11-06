@@ -1,7 +1,4 @@
-<p align="center">
-  <img src="Images/AutoDRIVE-Logo.png" width="256" height="256"><br>
-  <b>An Integrated Cyber-Physical Ecosystem for Autonomous Driving Research and Education</b>
-</p>
+<img src="Images/AutoDRIVE-Banner.jpg">
 
 <p align="center">
 <img src="https://badgen.net/github/stars/Tinker-Twins/AutoDRIVE?icon=github&label=Stars">
@@ -86,6 +83,8 @@ We encourage you to take a look at the following quick highlights to keep up wit
 | [AutoDRIVE Simulator Pitch Video](https://youtu.be/i7R79jwnqlg) | [AutoDRIVE Testbed Pitch Video](https://youtu.be/YFQzyfXV6Rw) |
 | [<img src="Images/OpenCAV-in-AutoDRIVE-Simulator.png" width="500">](https://youtu.be/YIZz_8rLgZQ) | [<img src="Images/RZR-in-AutoDRIVE-Simulator.png" width="500">](https://youtu.be/PLW1-sYW6Hw) |
 | [OpenCAV in AutoDRIVE Simulator](https://youtu.be/YIZz_8rLgZQ) | [RZR in AutoDRIVE Simulator](https://youtu.be/PLW1-sYW6Hw) |
+| [<img src="Images/F1TENTH-in-AutoDRIVE-Simulator.png" width="500">](https://youtu.be/Rq7Wwcwn1uk) | [<img src="Images/Parallel-RL-using-AutoDRIVE-Simulator.png" width="500">](https://youtu.be/UAIcgeZ-at8) |
+| [F1TENTH in AutoDRIVE Simulator](https://youtu.be/Rq7Wwcwn1uk) | [Parallel RL using AutoDRIVE Simulator](https://youtu.be/UAIcgeZ-at8) |
 | [<img src="Images/Nigel-Variability-Testing.png" width="500">](https://youtu.be/KtjZapz0OkE) | [<img src="Images/OpenCAV-Variability-Testing.png" width="500">](https://youtu.be/sW8Ic-XyufM) |
 | [Variability Testing using Nigel](https://youtu.be/KtjZapz0OkE) | [Variability Testing using OpenCAV](https://youtu.be/sW8Ic-XyufM) |
 |                    |                     |
@@ -234,3 +233,37 @@ year = {2022},
 copyright = {arXiv.org perpetual, non-exclusive license}
 }
 ```
+
+## Team
+
+#### Developers
+
+|                    |                     |
+|:------------------:|:-------------------:|
+| [<img src="Images/Developer-Tanmay-Samak.png" width="125">](https://www.linkedin.com/in/samaktanmay) | [<img src="Images/Developer-Chinmay-Samak.png" width="125">](https://www.linkedin.com/in/samakchinmay) |
+| [Tanmay Vilas Samak](https://www.linkedin.com/in/samaktanmay) | [Chinmay Vilas Samak](https://www.linkedin.com/in/samakchinmay) |
+|                    |                     |
+
+#### Contributers
+
+|                    |                     |
+|:------------------:|:-------------------:|
+| [<img src="Images/Contributer-Rohit-Ravikumar.png" width="125">](https://www.linkedin.com/in/rohitravikumar-) | [<img src="Images/Contributer-Parth-Shinde.png" width="125">](https://www.linkedin.com/in/parthshindelink) |
+| [Rohit Ravikumar](https://www.linkedin.com/in/rohitravikumar-) | [Parth Shinde](https://www.linkedin.com/in/parthshindelink) |
+|                    |                     |
+
+#### Mentors
+
+|                    |                     |                     |
+|:------------------:|:-------------------:|:-------------------:|
+| [<img src="Images/Mentor-Venkat-Krovi.png" width="125">](https://www.linkedin.com/in/venkatnkrovi) | [<img src="Images/Mentor-Sivanathan-Kandhasamy.png" width="125">](https://www.linkedin.com/in/dr-sivanathan-kandhasamy-a4703966) | [<img src="Images/Mentor-Ming-Xie.png" width="125">](https://www.linkedin.com/in/ming-xie-800a4aa1) |
+| [Dr. Venkat Krovi](https://www.linkedin.com/in/venkatnkrovi) | [Dr. Sivanathan Kandhasamy](https://www.linkedin.com/in/dr-sivanathan-kandhasamy-a4703966) | [Dr. Ming Xie](https://www.linkedin.com/in/ming-xie-800a4aa1) |
+|                    |                     |                     |
+
+#### Institutions
+
+|                    |                     |                     |
+|:------------------:|:-------------------:|:-------------------:|
+| [<img src="Images/Institution-CUICAR.png" width="250">](https://cuicar.com) | [<img src="Images/Institution-SRMIST.png" width="250">](https://www.srmist.edu.in/) | [<img src="Images/Institution-NTU.png" width="250">](https://www.ntu.edu.sg) |
+| [CU-ICAR](https://cuicar.com) | [SRM-IST](https://www.srmist.edu.in) | [NTU](https://www.ntu.edu.sg) |
+|                    |                     |                     |
