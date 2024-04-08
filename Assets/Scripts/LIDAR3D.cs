@@ -7,6 +7,7 @@ using UnityEngine.Profiling;
 public class LIDAR3D : MonoBehaviour
 {
 
+    public bool publishPCL12 = true; // PCL12 message format
     public bool publishPCL24 = true; // PCL24 message format
     public bool publishPCL48 = true; // PCL48 message format
 
@@ -19,21 +20,22 @@ public class LIDAR3D : MonoBehaviour
     public byte[] CurrentPointcloud{get{return PointcloudData;}}
     // public uint CurrentPCWidth{get{return Width;}}
     // public uint CurrentPCRowStep{get{return RowStep;}}
-
         
     private LidarSensor lidarSensor;
     private RGLNodeSequence rglSubgraphLidar;
+    private RGLNodeSequence rglSubgraphPcl12;
     private RGLNodeSequence rglSubgraphPcl24;
     private RGLNodeSequence rglSubgraphPcl48;
+    private byte[] pcl12Data; // Point cloud data in PCL24 format
     private byte[] pcl24Data; // Point cloud data in PCL24 format
     private byte[] pcl48Data; // Point cloud data in PCL48 format
 
     // Note: The matrix here is written as-if on paper,
     // but Unity's Matrix4x4 is constructed from column-vectors, hence the transpose.
     private Matrix4x4 LidarTF = new Matrix4x4(
-            new Vector4( 0.0f, 0.0f, 1.0f, 0.0f),
-            new Vector4(-1.0f, 0.0f, 0.0f, 0.0f),
-            new Vector4( 0.0f, 1.0f, 0.0f, 0.0f),
+            new Vector4( 0.0f, 0.0f, 1.0f, 0.0f), // Robotics X = Unity Z
+            new Vector4(-1.0f, 0.0f, 0.0f, 0.0f), // Robotics Y = Unity -X
+            new Vector4( 0.0f, 1.0f, 0.0f, 0.0f), // Robotics Z = Unity Y
             new Vector4( 0.0f, 0.0f, 0.0f, 1.0f)
         ).transpose;
 
@@ -41,7 +43,7 @@ public class LIDAR3D : MonoBehaviour
     void Start()
     {
 
-        if (!publishPCL24 && !publishPCL48)
+        if (!publishPCL12 && !publishPCL24 && !publishPCL48)
         {
             Debug.LogWarning("All LIDAR message formats are disabled!");
         }
@@ -52,6 +54,14 @@ public class LIDAR3D : MonoBehaviour
         rglSubgraphLidar = new RGLNodeSequence()
                 .AddNodePointsTransform("LIDAR", LidarTF);
         lidarSensor.ConnectToLidarFrame(rglSubgraphLidar);
+
+        if (publishPCL12)
+        {
+            pcl12Data = new byte[0];
+            rglSubgraphPcl12 = new RGLNodeSequence()
+                .AddNodePointsFormat("PCL12", FormatPCL12.GetRGLFields());
+            RGLNodeSequence.Connect(rglSubgraphLidar, rglSubgraphPcl12);
+        }
 
         if (publishPCL24)
         {
@@ -74,6 +84,19 @@ public class LIDAR3D : MonoBehaviour
     private void OnNewLidarData()
     {
         UnityEngine.Profiling.Profiler.BeginSample("Publish Pointclouds");
+
+        if (publishPCL12)
+        {
+            // int hitCount = rglSubgraphPcl12.GetResultDataRaw(ref pcl12Data, 12);
+            // PointcloudData = pcl12Data;
+            // Width = (uint) hitCount;
+            // RowStep = 12 * Width;
+
+            Vector3[] onlyHits = new Vector3[0];
+            rglSubgraphPcl12.GetResultData<Vector3>(ref onlyHits);
+            PointcloudData = ConvertVector3ArrayToByteArray(onlyHits);
+        }
+
         if (publishPCL24)
         {
             int hitCount = rglSubgraphPcl24.GetResultDataRaw(ref pcl24Data, 24);
@@ -101,41 +124,74 @@ public class LIDAR3D : MonoBehaviour
             }
         }
     }
+
+    public static byte[] ConvertVector3ArrayToByteArray(Vector3[] vectors)
+    {
+        // Each Vector3 consists of 3 float values (x, y, z), and each float is 4 bytes
+        int vectorSize = 3 * sizeof(float);
+        byte[] byteArray = new byte[vectors.Length * vectorSize];
+
+        for (int i = 0; i < vectors.Length; i++)
+        {
+            // Convert x, y, and z values to bytes using BitConverter
+            byte[] xBytes = System.BitConverter.GetBytes(vectors[i].x);
+            byte[] yBytes = System.BitConverter.GetBytes(vectors[i].y);
+            byte[] zBytes = System.BitConverter.GetBytes(vectors[i].z);
+
+            // Copy each float's bytes to the byte array
+            System.Array.Copy(xBytes, 0, byteArray, i * vectorSize, sizeof(float));
+            System.Array.Copy(yBytes, 0, byteArray, i * vectorSize + sizeof(float), sizeof(float));
+            System.Array.Copy(zBytes, 0, byteArray, i * vectorSize + 2 * sizeof(float), sizeof(float));
+        }
+
+        return byteArray;
+    }
+}
+
+public static class FormatPCL12
+{ 
+    public static RGLField[] GetRGLFields()
+    {
+        return new[]
+        {
+            RGLField.XYZ_F32
+        };
+    }
 }
 
 public static class FormatPCL24
-    { 
-        public static RGLField[] GetRGLFields()
-        {
-            return new[]
-            {
-                RGLField.XYZ_F32,
-                RGLField.PADDING_32,
-                RGLField.INTENSITY_F32,
-                RGLField.RING_ID_U16,
-                RGLField.PADDING_16
-            };
-        }
-    }
-
-    public static class FormatPCL48
+{ 
+    public static RGLField[] GetRGLFields()
     {
-        public static RGLField[] GetRGLFields()
+        return new[]
         {
-            return new[]
-            {
-                RGLField.XYZ_F32,
-                RGLField.PADDING_32,
-                RGLField.INTENSITY_F32,
-                RGLField.RING_ID_U16,
-                RGLField.PADDING_16,
-                RGLField.AZIMUTH_F32,
-                RGLField.DISTANCE_F32,
-                RGLField.RETURN_TYPE_U8,
-                RGLField.PADDING_8,
-                RGLField.PADDING_16,
-                RGLField.PADDING_32,
-                RGLField.TIME_STAMP_F64
-            };
-        }
+            RGLField.XYZ_F32,
+            RGLField.PADDING_32,
+            RGLField.INTENSITY_F32,
+            RGLField.RING_ID_U16,
+            RGLField.PADDING_16
+        };
     }
+}
+
+public static class FormatPCL48
+{
+    public static RGLField[] GetRGLFields()
+    {
+        return new[]
+        {
+            RGLField.XYZ_F32,
+            RGLField.PADDING_32,
+            RGLField.INTENSITY_F32,
+            RGLField.RING_ID_U16,
+            RGLField.PADDING_16,
+            RGLField.AZIMUTH_F32,
+            RGLField.DISTANCE_F32,
+            RGLField.RETURN_TYPE_U8,
+            RGLField.PADDING_8,
+            RGLField.PADDING_16,
+            RGLField.PADDING_32,
+            RGLField.TIME_STAMP_F64
+        };
+    }
+}

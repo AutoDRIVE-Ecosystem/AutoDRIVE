@@ -17,7 +17,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Testing School.unity
     guid: ea27ada31fefc474eb8fd1d33740ae33
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/RZR - AEB - HPC.unity
     guid: a2de632a4b4104549abc77eea157502b
   - enabled: 0
@@ -41,7 +41,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Hunter SE - Tiny Town.unity
     guid: b07ed931d0a9fa845ba32367ea021c88
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Hunter SE - New.unity
     guid: 5a324a8c9f4625b42bdc1c37368c9b35
   - enabled: 0
@@ -98,6 +98,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/VSR - Multi-Camera Data Recording.unity
     guid: 9b44e16b9e7797b4abdfa1971b0b529e
+  - enabled: 0
+    path: Assets/Scenes/Hunter SE - Data Collection - Copy.unity
+    guid: ff1afea9eb61e7e4b98bf855975bec3b
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: aa9f1dccb27d10b45a01eba82df6fd1e,
       type: 2}

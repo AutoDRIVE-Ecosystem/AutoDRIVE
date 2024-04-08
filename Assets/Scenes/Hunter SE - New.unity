@@ -15473,7 +15473,7 @@ PrefabInstance:
     - target: {fileID: 4583723101891398577, guid: 0cb450bf62e8bdb4caab6a0a88606dca,
         type: 3}
       propertyPath: publishPCL24
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4583723101891398577, guid: 0cb450bf62e8bdb4caab6a0a88606dca,
         type: 3}
@@ -15533,7 +15533,12 @@ PrefabInstance:
     - target: {fileID: 4583723101891398582, guid: 0cb450bf62e8bdb4caab6a0a88606dca,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4583723101891398582, guid: 0cb450bf62e8bdb4caab6a0a88606dca,
+        type: 3}
+      propertyPath: pointSize
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 4583723101996645726, guid: 0cb450bf62e8bdb4caab6a0a88606dca,
         type: 3}
@@ -15555,6 +15560,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4583723103221933065, guid: 0cb450bf62e8bdb4caab6a0a88606dca,
+        type: 3}
+      propertyPath: meshSource
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cb450bf62e8bdb4caab6a0a88606dca, type: 3}
 --- !u!1 &1053544453 stripped
@@ -15566,6 +15576,12 @@ GameObject:
 --- !u!4 &1053544454 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 617086569657283821, guid: 0cb450bf62e8bdb4caab6a0a88606dca,
+    type: 3}
+  m_PrefabInstance: {fileID: 1053544452}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1053544455 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 617086569657283820, guid: 0cb450bf62e8bdb4caab6a0a88606dca,
     type: 3}
   m_PrefabInstance: {fileID: 1053544452}
   m_PrefabAsset: {fileID: 0}
@@ -16888,6 +16904,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16d42172b8710de4494d9433386d5be8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1181429743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053544453}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4fc0230eb5615744b911dcee72ba646, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CoSimTimer: 0
+  CoSimSmoothness: 3
+  CoSimPosition: {x: 50, y: 1.7, z: 25}
+  CoSimRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1001 &1190709891
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31070,6 +31102,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2215778868848548716, guid: 4f287c2bab4374042926d92ee1970fb2,
         type: 3}
+      propertyPath: CoSimManagers.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2215778868848548716, guid: 4f287c2bab4374042926d92ee1970fb2,
+        type: 3}
       propertyPath: RearCameras.Array.data[0]
       value: 
       objectReference: {fileID: 899581453}
@@ -31085,12 +31122,22 @@ PrefabInstance:
       objectReference: {fileID: 215838394}
     - target: {fileID: 2215778868848548716, guid: 4f287c2bab4374042926d92ee1970fb2,
         type: 3}
+      propertyPath: CoSimManagers.Array.data[0]
+      value: 
+      objectReference: {fileID: 1181429743}
+    - target: {fileID: 2215778868848548716, guid: 4f287c2bab4374042926d92ee1970fb2,
+        type: 3}
       propertyPath: VehicleLightings.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2215778868848548716, guid: 4f287c2bab4374042926d92ee1970fb2,
         type: 3}
       propertyPath: PositioningSystems.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2215778868848548716, guid: 4f287c2bab4374042926d92ee1970fb2,
+        type: 3}
+      propertyPath: VehicleRigidBodies.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2215778868848548716, guid: 4f287c2bab4374042926d92ee1970fb2,
@@ -31113,6 +31160,11 @@ PrefabInstance:
       propertyPath: VehicleControllers.Array.data[0]
       value: 
       objectReference: {fileID: 1181429742}
+    - target: {fileID: 2215778868848548716, guid: 4f287c2bab4374042926d92ee1970fb2,
+        type: 3}
+      propertyPath: VehicleRigidBodies.Array.data[0]
+      value: 
+      objectReference: {fileID: 1053544455}
     - target: {fileID: 2215778868848548716, guid: 4f287c2bab4374042926d92ee1970fb2,
         type: 3}
       propertyPath: TrafficLightControllers.Array.size

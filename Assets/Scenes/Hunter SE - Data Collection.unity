@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 7aa328208791d8a4bbcd5297fb56c46e,
+  m_LightingDataAsset: {fileID: 112000000, guid: 6970ff47fb90e184b9f036ac32766eb3,
     type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 489af27586b29454f9006abdfcf48d2b,
     type: 2}
@@ -11443,6 +11443,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e1966a8d0f902459f4fd6126e61115, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  publishPCL12: 1
   publishPCL24: 1
   publishPCL48: 0
   TerrainMeshes: []

@@ -290,14 +290,6 @@ public class Socket : MonoBehaviour
                         data["V"+(i+1).ToString()+" LIDAR Scan Rate"] = LIDARUnits[i].CurrentScanRate.ToString("F3"); // Get LIDAR scan rate
                         if(LIDARUnits[i].CurrentRangeArray[LIDARUnits[i].CurrentRangeArray.Length-1] != null)
                         {
-                            // for(int j=0;j<LIDARUnits[i].CurrentRangeArray.Length-1;j++)
-                            // {
-                            //     LIDARRangeArray += LIDARUnits[i].CurrentRangeArray[j] + " ";
-                            //     LIDARIntensityArray += LIDARUnits[i].CurrentIntensityArray[j] + " ";
-                            // }
-                            // LIDARRangeArray += LIDARUnits[i].CurrentRangeArray[LIDARUnits[i].CurrentRangeArray.Length-1];
-                            // LIDARIntensityArray += LIDARUnits[i].CurrentIntensityArray[LIDARUnits[i].CurrentRangeArray.Length-1];
-
                             LIDARRangeArray = string.Join(" ", LIDARUnits[i].CurrentRangeArray);
                             LIDARIntensityArray = string.Join(" ", LIDARUnits[i].CurrentIntensityArray);
                         }
