@@ -126,7 +126,7 @@ We encourage you to take a look at the following presentations to gain a better 
 
 ### Publications
 
-We encourage you to read and cite the following papers if you use any part of this project for your research:
+We encourage you to read and cite the relevant papers if you use any part of this project for your research:
 
 #### [AutoDRIVE: A Comprehensive, Flexible and Integrated Digital Twin Ecosystem for Enhancing Autonomous Driving Research and Education](https://arxiv.org/abs/2212.05241)
 ```bibtex
@@ -184,12 +184,12 @@ This work has been published at **2023 IEEE/ASME International Conference on Adv
 #### [Towards Sim2Real Transfer of Autonomy Algorithms using AutoDRIVE Ecosystem](https://arxiv.org/abs/2307.13272)
 ```bibtex
 @eprint{AutoDRIVE-Sim2Real-2023,
-title={Towards Sim2Real Transfer of Autonomy Algorithms using AutoDRIVE Ecosystem}, 
-author={Chinmay Vilas Samak and Tanmay Vilas Samak and Venkat Krovi},
-year={2023},
-eprint={2307.13272},
-archivePrefix={arXiv},
-primaryClass={cs.RO}
+title = {Towards Sim2Real Transfer of Autonomy Algorithms using AutoDRIVE Ecosystem}, 
+author = {Chinmay Vilas Samak and Tanmay Vilas Samak and Venkat Krovi},
+year = {2023},
+eprint ={2307.13272},
+archivePrefix = {arXiv},
+primaryClass = {cs.RO}
 }
 ```
 This work has been accepted at **2023 AACC/IFAC Modeling, Estimation and Control Conference (MECC).** The open-access publication can be found on [ScienceDirect](https://doi.org/10.1016/j.ifacol.2023.12.037).
@@ -197,12 +197,12 @@ This work has been accepted at **2023 AACC/IFAC Modeling, Estimation and Control
 #### [Multi-Agent Deep Reinforcement Learning for Cooperative and Competitive Autonomous Vehicles using AutoDRIVE Ecosystem](https://arxiv.org/abs/2309.10007)
 ```bibtex
 @eprint{AutoDRIVE-MARL-2023,
-title={Multi-Agent Deep Reinforcement Learning for Cooperative and Competitive Autonomous Vehicles using AutoDRIVE Ecosystem}, 
-author={Tanmay Vilas Samak and Chinmay Vilas Samak and Venkat Krovi},
-year={2023},
-eprint={2309.10007},
-archivePrefix={arXiv},
-primaryClass={cs.RO}
+title = {Multi-Agent Deep Reinforcement Learning for Cooperative and Competitive Autonomous Vehicles using AutoDRIVE Ecosystem}, 
+author = {Tanmay Vilas Samak and Chinmay Vilas Samak and Venkat Krovi},
+year = {2023},
+eprint = {2309.10007},
+archivePrefix = {arXiv},
+primaryClass = {cs.RO}
 }
 ```
 This work has been accepted as Multi-Agent Dynamic Games (MAD-Games) Workshop paper at **2023 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS).** The publication can be found on [MAD-Games Workshop Website](https://iros2023-madgames.f1tenth.org/papers/samak.pdf).
@@ -210,18 +210,57 @@ This work has been accepted as Multi-Agent Dynamic Games (MAD-Games) Workshop pa
 #### [Nigel - Mechatronic Design and Robust Sim2Real Control of an Over-Actuated Autonomous Vehicle](https://arxiv.org/abs/2401.11542)
 ```bibtex
 @eprint{Nigel-4WD4WS-2024,
-title={Nigel -- Mechatronic Design and Robust Sim2Real Control of an Over-Actuated Autonomous Vehicle}, 
-author={Chinmay Vilas Samak and Tanmay Vilas Samak and Javad Mohammadpour Velni and Venkat Narayan Krovi},
-year={2024},
-eprint={2401.11542},
-archivePrefix={arXiv},
-primaryClass={cs.RO}
+title = {Nigel -- Mechatronic Design and Robust Sim2Real Control of an Over-Actuated Autonomous Vehicle}, 
+author = {Chinmay Vilas Samak and Tanmay Vilas Samak and Javad Mohammadpour Velni and Venkat Narayan Krovi},
+year = {2024},
+eprint = {2401.11542},
+archivePrefix = {arXiv},
+primaryClass = {cs.RO}
+}
+```
+This work has been accepted in **IEEE/ASME Transactions on Mechatronics (TMECH)** and additionally accepted to be presented at **2024 IEEE/ASME International Conference on Advanced Intelligent Mechatronics (AIM).**
+
+#### [Towards Validation of Autonomous Vehicles Across Scales using an Integrated Digital Twin Framework](https://arxiv.org/abs/2402.12670)
+```bibtex
+@eprint{AutoDRIVE-Autoware-2024,
+title = {Towards Validation of Autonomous Vehicles Across Scales using an Integrated Digital Twin Framework}, 
+author = {Tanmay Vilas Samak and Chinmay Vilas Samak and Venkat Narayan Krovi},
+year = {2024},
+eprint = {2402.12670},
+archivePrefix = {arXiv},
+primaryClass = {cs.RO}
+}
+```
+This work has been accepted at **2024 IEEE/ASME International Conference on Advanced Intelligent Mechatronics (AIM).**
+
+#### [A Scalable and Parallelizable Digital Twin Framework for Sustainable Sim2Real Transition of Multi-Agent Reinforcement Learning Systems](https://arxiv.org/abs/2403.10996)
+```bibtex
+@eprint{AutoDRIVE-DT-MARL-2024,
+title = {A Scalable and Parallelizable Digital Twin Framework for Sustainable Sim2Real Transition of Multi-Agent Reinforcement Learning Systems}, 
+author = {Chinmay Vilas Samak and Tanmay Vilas Samak and Venkat Krovi},
+year = {2024},
+eprint = {2403.10996},
+archivePrefix = {arXiv},
+primaryClass = {cs.RO}
 }
 ```
 
+#### [Off-Road Autonomy Validation Using Scalable Digital Twin Simulations Within High-Performance Computing Clusters](https://arxiv.org/abs/2405.04743)
+```bibtex
+@eprint{AutoDRIVE-HPC-RZR-2024,
+title = {Off-Road Autonomy Validation Using Scalable Digital Twin Simulations Within High-Performance Computing Clusters}, 
+author = {Tanmay Vilas Samak and Chinmay Vilas Samak and Joey Binz and Jonathon Smereka and Mark Brudnak and David Gorsich and Feng Luo and Venkat Krovi},
+year = {2024},
+eprint = {2405.04743},
+archivePrefix = {arXiv},
+primaryClass = {cs.RO}
+}
+```
+This work has been accepted at **2024 Ground Vehicle Systems Engineering and Technology Symposium (GVSETS). Distribution Statement A. Approved for public release; distribution is unlimited. OPSEC #8451.**
+
 ### Technical Reports
 
-We encourage you to read and cite the following technical reports if you use any part of this project for your research (these can serve as a good source of documentation as well):
+We encourage you to read and cite the relevant technical reports if you use any part of this project for your research (these can serve as a good source of documentation as well):
 
 #### [AutoDRIVE - Technical Report](https://arxiv.org/abs/2211.08475)
 ```bibtex
@@ -247,6 +286,20 @@ keywords = {Robotics (cs.RO), FOS: Computer and information sciences, FOS: Compu
 title = {AutoDRIVE Simulator -- Technical Report},
 publisher = {arXiv},
 year = {2022},
+copyright = {arXiv.org perpetual, non-exclusive license}
+}
+```
+#### [Autonomy Oriented Digital Twins for Real2Sim2Real Autoware Deployment](https://arxiv.org/abs/2402.14739)
+```bibtex
+@misc{AutoDRIVE-Autoware-Technical-Report,
+doi = {10.48550/arXiv.2402.14739},
+url = {https://doi.org/10.48550/arXiv.2402.14739},
+author = {Chinmay Vilas Samak and Tanmay Vilas Samak},
+title = {Autonomy Oriented Digital Twins for Real2Sim2Real Autoware Deployment},
+year = {2024},
+eprint = {2402.14739},
+archivePrefix = {arXiv},
+primaryClass = {cs.RO}
 copyright = {arXiv.org perpetual, non-exclusive license}
 }
 ```
