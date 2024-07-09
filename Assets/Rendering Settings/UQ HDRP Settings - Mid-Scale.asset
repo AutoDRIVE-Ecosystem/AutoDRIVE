@@ -275,6 +275,9 @@ MonoBehaviour:
     m_Value:
       serializedVersion: 2
       m_Bits: 4294967295
+  specularOcclusion:
+    m_OverrideState: 0
+    m_Value: 0.5
   occluderMotionRejection:
     m_OverrideState: 0
     m_Value: 1
@@ -557,6 +560,7 @@ MonoBehaviour:
   m_Name: UQ HDRP Settings - Mid-Scale
   m_EditorClassIdentifier: 
   components:
+  - {fileID: -4174170867911233725}
   - {fileID: 114867971589338674}
   - {fileID: 114605534519335820}
   - {fileID: -8166924896437318632}
@@ -564,7 +568,6 @@ MonoBehaviour:
   - {fileID: -7437332888642966093}
   - {fileID: 5450425991739608604}
   - {fileID: -3777490873987439091}
-  - {fileID: -4174170867911233725}
   - {fileID: 6569518847877473354}
   - {fileID: 781206895839050672}
   - {fileID: -2942376455457862789}
@@ -813,6 +816,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   active: 1
+  interCascadeBorders: 1
   maxShadowDistance:
     m_OverrideState: 1
     m_Value: 100
@@ -883,7 +887,7 @@ MonoBehaviour:
   active: 1
   enable:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0
   localClouds:
     m_OverrideState: 0
     m_Value: 0
@@ -1512,7 +1516,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d08ce26990eb1a4a9177b860541e702, type: 3}
   m_Name: Exposure
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   mode:
     m_OverrideState: 1
     m_Value: 1

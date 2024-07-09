@@ -20,7 +20,8 @@ public class VehicleController : MonoBehaviour
     private float ThrottleInput;
     private float SteeringInput;
 
-    [Header("Common Parameters")]
+    public enum InputType { Default, F710, Xbox, G29 };
+    public InputType HMIType = InputType.Default; // Set input type
     public GameObject Vehicle;
     public Rigidbody VehicleRigidBody;
     public Vector3 COM;
@@ -30,6 +31,7 @@ public class VehicleController : MonoBehaviour
     public Transform RearLeftWheelTransform, RearRightWheelTransform;
     public enum DriveType {IRWD, IFWD, IAWD, CRWD, CFWD, CAWD, SkidSteer};
     public DriveType driveType = DriveType.IRWD; // Set drive type
+    public float ThrottleLimit = 1.0f; // norm%
     public float SteeringRate = 315.789f; // deg/s (w.r.t. physics timestep)
     public float Wheelbase = 141.54f; // mm
     public float TrackWidth = 153f; // mm
@@ -83,12 +85,15 @@ public class VehicleController : MonoBehaviour
     public void GetInput()
   	{
         // THROTTLE INPUT
-        ThrottleInput = Input.GetAxis("Vertical");
+        if (HMIType == InputType.Default) ThrottleInput = Input.GetAxis("Vertical");
+        if (HMIType == InputType.F710) ThrottleInput = Input.GetAxis("Vertical F710");
+        if (HMIType == InputType.Xbox) ThrottleInput = Input.GetAxis("Vertical Xbox");
+        if (HMIType == InputType.G29) ThrottleInput = Input.GetAxis("Vertical G29");
 
         // STEERING INPUT
 
         // Continuous control using mouse
-        if (Input.GetMouseButton(0))
+        if (HMIType == InputType.Default && Input.GetMouseButton(0))
         {
             float MousePosition = Input.mousePosition.x; // Get the mouse position
             // Check if its the first time pressing down on mouse button
@@ -104,7 +109,10 @@ public class VehicleController : MonoBehaviour
         else
         {
             MouseHold = false; // The mouse button is released
-            SteeringInput = -Input.GetAxis("Horizontal");
+            if (HMIType == InputType.Default) SteeringInput = -Input.GetAxis("Horizontal");
+            if (HMIType == InputType.F710) SteeringInput = -Input.GetAxis("Horizontal F710");
+            if (HMIType == InputType.Xbox) SteeringInput = -Input.GetAxis("Horizontal Xbox");
+            if (HMIType == InputType.G29) SteeringInput = -Input.GetAxis("Horizontal G29");
         }
   	}
 
@@ -138,8 +146,8 @@ public class VehicleController : MonoBehaviour
         //Debug.Log("RPM: " + (RearLeftWheelCollider.rpm + RearRightWheelCollider.rpm)/2); // Average wheel speed (RPM)
         //Debug.Log("Speed: " + (Mathf.PI*0.065)*((RearLeftWheelCollider.rpm + RearRightWheelCollider.rpm)/120)); // Average vehicle speed (m/s)
 
-        if(DrivingMode == 0) DriveTorque = ThrottleInput*MotorTorque; // Manual Driving
-        else DriveTorque = AutonomousThrottle*MotorTorque; // Autonomous Driving
+        if(DrivingMode == 0) DriveTorque = ThrottleLimit*ThrottleInput*MotorTorque; // Manual Driving
+        else DriveTorque = ThrottleLimit*AutonomousThrottle*MotorTorque; // Autonomous Driving
 
         BrakeTorque = MotorTorque; // Compute brake torque
 

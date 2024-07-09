@@ -5,13 +5,9 @@ using TMPro;
 
 public class AutomobileController : MonoBehaviour
 {
-	internal enum driveType
-	{
-		FrontWheelDrive,
-		RearWheelDrive,
-		AllWheelDrive
-	}
-	
+    public enum InputType { Default, F710, Xbox, G29 };
+    public InputType HMIType = InputType.Default; // Set input type
+    internal enum driveType { FrontWheelDrive, RearWheelDrive,	AllWheelDrive }
 	public TextMeshProUGUI speedText;
 	public TextMeshProUGUI gearText;
 	public float Wheelbase = 3.09f; // m
@@ -175,8 +171,8 @@ public class AutomobileController : MonoBehaviour
 	{
 		speedText.text = ((int)Mathf.Abs(currSpeed)).ToString();
 		if (currSpeed != 0 && gearNum > 0) gearText.text = "D";
-		if (currSpeed == 0 && !Input.GetKey(KeyCode.Space)) gearText.text = "N";
-		if (currSpeed == 0 && Input.GetKey(KeyCode.Space)) gearText.text = "P";
+		if (currSpeed == 0 && !(brakeInput > 0)) gearText.text = "N";
+		if (currSpeed == 0 && handbrakeInput > 0) gearText.text = "P";
 		if (currSpeed != 0 && gearNum < 0) gearText.text = "R";
 	}
 
@@ -185,10 +181,36 @@ public class AutomobileController : MonoBehaviour
 		// THROTTLE INPUT
 		if(DrivingMode == 0) // Manual Driving
 		{
-			fwdInput = (Input.GetAxis("Vertical") > 0) ? Input.GetAxis("Vertical") : 0;
-			revInput = (Input.GetAxis("Vertical") < 0) ? Input.GetAxis("Vertical") : 0;
-			currentT = Input.GetAxis("Vertical");
-		}
+            if (HMIType == InputType.Default)
+			{
+                fwdInput = (Input.GetAxis("Vertical") > 0) ? Input.GetAxis("Vertical") : 0;
+                revInput = (Input.GetAxis("Vertical") < 0) ? Input.GetAxis("Vertical") : 0;
+                currentT = Input.GetAxis("Vertical");
+            }
+            if (HMIType == InputType.F710)
+            {
+                fwdInput = (Input.GetAxis("Vertical F710") > 0) ? Input.GetAxis("Vertical F710") : 0;
+                revInput = (Input.GetAxis("Vertical F710") < 0) ? Input.GetAxis("Vertical F710") : 0;
+                currentT = Input.GetAxis("Vertical F710");
+            }
+            if (HMIType == InputType.Xbox)
+            {
+                fwdInput = (Input.GetAxis("Vertical Xbox") > 0) ? Input.GetAxis("Vertical Xbox") : 0;
+                revInput = (Input.GetAxis("Vertical Xbox") < 0) ? Input.GetAxis("Vertical Xbox") : 0;
+                currentT = Input.GetAxis("Vertical Xbox");
+            }
+            if (HMIType == InputType.G29)
+            {
+                fwdInput = (Input.GetAxis("Vertical G29") > 0) ? Input.GetAxis("Vertical G29") : 0;
+                revInput = (Input.GetAxis("Vertical G29") > 0) ? -Input.GetAxis("Vertical G29") : 0;
+				if (Input.GetAxis("Vertical G29") > 0)
+				{
+					currentT = (gearNum >= 0) ? Input.GetAxis("Vertical G29") : -Input.GetAxis("Vertical G29");
+				}
+				else currentT = 0;
+            }
+
+        }
         else // Autonomous Driving
 		{
 			fwdInput = (AutonomousThrottle > 0) ? AutonomousThrottle : 0;
@@ -200,7 +222,7 @@ public class AutomobileController : MonoBehaviour
 		if(DrivingMode == 0) // Manual Driving
 		{
 			// Continuous control using mouse
-			if (Input.GetMouseButton(0))
+			if (HMIType == InputType.Default && Input.GetMouseButton(0))
 			{
 				float MousePosition = Input.mousePosition.x; // Get the mouse position
 				// Check if its the first time pressing down on mouse button
@@ -216,8 +238,11 @@ public class AutomobileController : MonoBehaviour
 			else
 			{
 				MouseHold = false; // The mouse button is released
-				steerInput = -Input.GetAxis("Horizontal");
-			}
+                if (HMIType == InputType.Default) steerInput = -Input.GetAxis("Horizontal");
+                if (HMIType == InputType.F710) steerInput = -Input.GetAxis("Horizontal F710");
+                if (HMIType == InputType.Xbox) steerInput = -Input.GetAxis("Horizontal Xbox");
+                if (HMIType == InputType.G29) steerInput = -Input.GetAxis("Horizontal G29");
+            }
 
 			currentS = steerInput*maxSteerAngle*(Mathf.PI/180);
 		}
@@ -230,8 +255,16 @@ public class AutomobileController : MonoBehaviour
 		// BRAKE INPUT
 		if(DrivingMode == 0) // Manual Driving
 		{
-			brakeInput = Input.GetKey(KeyCode.X) ? 1.0f: 0.0f;
-			currentB = Input.GetKey(KeyCode.X) ? 1.0f: 0.0f;
+			if (HMIType == InputType.G29)
+			{
+                brakeInput = (Input.GetAxis("Vertical G29") < 0) ? -Input.GetAxis("Vertical G29") : 0;
+				currentB = (Input.GetAxis("Vertical G29") < 0) ? -Input.GetAxis("Vertical G29") : 0;
+			}
+			else
+			{
+				brakeInput = Input.GetKey(KeyCode.X) ? 1.0f : 0.0f;
+				currentB = Input.GetKey(KeyCode.X) ? 1.0f : 0.0f;
+			}
 		}
         else // Autonomous Driving
 		{
@@ -309,8 +342,8 @@ public class AutomobileController : MonoBehaviour
 
 	void driftCar ()
 	{
-		if (currSpeed > 0 && Mathf.Abs (-steerInput) > 0 && (revInput < 0 || Input.GetKey (KeyCode.Space)) && (!isFlying ())) {
-			float localDriftPower = Input.GetKey (KeyCode.Space) ? driftPower : 0.8f * driftPower;
+		if (currSpeed > 0 && Mathf.Abs (-steerInput) > 0 && (brakeInput > 0 || handbrakeInput > 0) && (!isFlying ())) {
+			float localDriftPower = handbrakeInput > 0 ? driftPower : 0.8f * driftPower;
 			float torque = Mathf.Clamp (localDriftPower * -steerInput * currSpeed, -15000, 15000);
 			car.AddRelativeTorque (transform.up * torque);
 		}
@@ -339,17 +372,15 @@ public class AutomobileController : MonoBehaviour
 
 	void shiftGear ()
 	{
-		if (gearNum == 0 && fwdInput > 0)
+		if (gearNum == 0 && ((HMIType != InputType.G29 && fwdInput > 0) || (HMIType == InputType.G29 && Input.GetKey(KeyCode.T))))
 			gearNum = 1;
-		if (gearNum == 0 && fwdInput < 0)
-			gearNum = -1;
 		if ((gearNum < gearRatios.length - 1 && engineRPM >= maxGearChangeRPM) && !isFlying () && checkGearSpeed ())
 			gearNum++;
 		if (gearNum > 1 && engineRPM <= minGearChangeRPM)
 			gearNum--;
-		if (checkStandStill () && revInput < 0)
+		if (checkStandStill () && ((HMIType != InputType.G29 && revInput < 0) || (HMIType == InputType.G29 && Input.GetKey(KeyCode.G))))
 			gearNum = -1;
-		if (gearNum == -1 && checkStandStill () && fwdInput > 0)
+		if (gearNum == -1 && checkStandStill () && ((HMIType != InputType.G29 && fwdInput > 0) || (HMIType == InputType.G29 && Input.GetKey(KeyCode.T))))
 			gearNum = 1;
 	}
 
@@ -504,7 +535,7 @@ public class AutomobileController : MonoBehaviour
 	void steerHelper ()
 	{
 		localSteerHelper = Mathf.SmoothStep (localSteerHelper, _steerHelper * Mathf.Abs (-steerInput), 0.1f);
-		if (Input.GetKey (KeyCode.S) || Input.GetKey (KeyCode.DownArrow)) {
+		if (brakeInput > 0) {
 			_steerHelper *= -1;
 		}
 

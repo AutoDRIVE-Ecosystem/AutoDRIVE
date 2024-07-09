@@ -560,6 +560,7 @@ MonoBehaviour:
   m_Name: UQ HDRP Settings - Full-Scale
   m_EditorClassIdentifier: 
   components:
+  - {fileID: -4174170867911233725}
   - {fileID: 114867971589338674}
   - {fileID: 114605534519335820}
   - {fileID: -8166924896437318632}
@@ -567,7 +568,6 @@ MonoBehaviour:
   - {fileID: -7437332888642966093}
   - {fileID: 5450425991739608604}
   - {fileID: -3777490873987439091}
-  - {fileID: -4174170867911233725}
   - {fileID: 6569518847877473354}
   - {fileID: 781206895839050672}
   - {fileID: -2942376455457862789}
@@ -784,7 +784,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d7593b3a9277ac4696b20006c21dde2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   skyType:
     m_OverrideState: 1
     m_Value: 4

@@ -701,6 +701,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine_D (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 8316334779356437779, guid: 35e087cfaa0f57244b67615777188d3e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8480816894920273663, guid: 35e087cfaa0f57244b67615777188d3e,
         type: 3}
       propertyPath: m_Enabled
@@ -826,6 +831,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pine_A (69)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2503636403554334455, guid: 451d860cead90b64bbbab1639909594c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3023433396663086157, guid: 451d860cead90b64bbbab1639909594c,
         type: 3}
@@ -1822,6 +1832,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine_A (45)
       objectReference: {fileID: 0}
+    - target: {fileID: 2503636403554334455, guid: 451d860cead90b64bbbab1639909594c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3023433396663086157, guid: 451d860cead90b64bbbab1639909594c,
         type: 3}
       propertyPath: m_RootOrder
@@ -2389,6 +2404,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine_D (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 8316334779356437779, guid: 35e087cfaa0f57244b67615777188d3e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8480816894920273663, guid: 35e087cfaa0f57244b67615777188d3e,
         type: 3}
       propertyPath: m_Enabled
@@ -2494,6 +2514,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pine_A (55)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2503636403554334455, guid: 451d860cead90b64bbbab1639909594c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3023433396663086157, guid: 451d860cead90b64bbbab1639909594c,
         type: 3}
@@ -2609,7 +2634,7 @@ Transform:
   - {fileID: 1787202443}
   - {fileID: 549441931}
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &200592236 stripped
 GameObject:
@@ -2799,6 +2824,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pine_A (70)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2503636403554334455, guid: 451d860cead90b64bbbab1639909594c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3023433396663086157, guid: 451d860cead90b64bbbab1639909594c,
         type: 3}
@@ -3563,7 +3593,7 @@ PrefabInstance:
     - target: {fileID: 6060788920606015911, guid: e730e362773695e408e48f59e6dff87a,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6870223390090205981, guid: e730e362773695e408e48f59e6dff87a,
         type: 3}
@@ -4301,6 +4331,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine_C (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 1722164173232303198, guid: 942660f4ebcf9cd438f45122b0ad63eb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2066461308124542692, guid: 942660f4ebcf9cd438f45122b0ad63eb,
         type: 3}
       propertyPath: m_RootOrder
@@ -4465,6 +4500,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pine_B (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1127992084609228112, guid: 34776a9356ed54141bf7fed4fded28a0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5458397801129929743, guid: 34776a9356ed54141bf7fed4fded28a0,
         type: 3}
@@ -4632,6 +4672,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pine_A (39)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2503636403554334455, guid: 451d860cead90b64bbbab1639909594c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3023433396663086157, guid: 451d860cead90b64bbbab1639909594c,
         type: 3}
@@ -5477,6 +5522,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine_A (71)
       objectReference: {fileID: 0}
+    - target: {fileID: 2503636403554334455, guid: 451d860cead90b64bbbab1639909594c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3023433396663086157, guid: 451d860cead90b64bbbab1639909594c,
         type: 3}
       propertyPath: m_RootOrder
@@ -5575,7 +5625,7 @@ PrefabInstance:
     - target: {fileID: 4012337630082778474, guid: cce4d8667f2436a479759f07084d8ff4,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4388053584151060432, guid: cce4d8667f2436a479759f07084d8ff4,
         type: 3}
@@ -5751,6 +5801,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pine_B (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1127992084609228112, guid: 34776a9356ed54141bf7fed4fded28a0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5458397801129929743, guid: 34776a9356ed54141bf7fed4fded28a0,
         type: 3}
@@ -5963,6 +6018,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7810280185978483464, guid: d4af2b4ca8bf339409a9f61d7ef42b31,
+        type: 3}
+      propertyPath: m_VerticalAxis
+      value: Vertical
+      objectReference: {fileID: 0}
+    - target: {fileID: 7810280185978483464, guid: d4af2b4ca8bf339409a9f61d7ef42b31,
+        type: 3}
+      propertyPath: m_HorizontalAxis
+      value: Horizontal
+      objectReference: {fileID: 0}
     - target: {fileID: 7810280185978483466, guid: d4af2b4ca8bf339409a9f61d7ef42b31,
         type: 3}
       propertyPath: m_Name
@@ -6341,6 +6406,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine_C (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1722164173232303198, guid: 942660f4ebcf9cd438f45122b0ad63eb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2066461308124542692, guid: 942660f4ebcf9cd438f45122b0ad63eb,
         type: 3}
       propertyPath: m_RootOrder
@@ -6435,6 +6505,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pine_A (38)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2503636403554334455, guid: 451d860cead90b64bbbab1639909594c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3023433396663086157, guid: 451d860cead90b64bbbab1639909594c,
         type: 3}
@@ -6739,7 +6814,7 @@ PrefabInstance:
     - target: {fileID: 6060788920606015911, guid: e730e362773695e408e48f59e6dff87a,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6870223390090205981, guid: e730e362773695e408e48f59e6dff87a,
         type: 3}
@@ -7972,6 +8047,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine_B (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 1127992084609228112, guid: 34776a9356ed54141bf7fed4fded28a0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5458397801129929743, guid: 34776a9356ed54141bf7fed4fded28a0,
         type: 3}
       propertyPath: m_Enabled
@@ -8414,6 +8494,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine_B (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 1127992084609228112, guid: 34776a9356ed54141bf7fed4fded28a0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5458397801129929743, guid: 34776a9356ed54141bf7fed4fded28a0,
         type: 3}
       propertyPath: m_Enabled
@@ -8550,6 +8635,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine_A (54)
       objectReference: {fileID: 0}
+    - target: {fileID: 2503636403554334455, guid: 451d860cead90b64bbbab1639909594c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3023433396663086157, guid: 451d860cead90b64bbbab1639909594c,
         type: 3}
       propertyPath: m_RootOrder
@@ -8657,8 +8747,18 @@ PrefabInstance:
       objectReference: {fileID: 1816161728}
     - target: {fileID: 5601152658778452612, guid: c642fe99abb9aac43b3547ab34498168,
         type: 3}
+      propertyPath: RearCameras.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5601152658778452612, guid: c642fe99abb9aac43b3547ab34498168,
+        type: 3}
       propertyPath: Vehicles.Array.data[0]
       value: 
+      objectReference: {fileID: 1053544453}
+    - target: {fileID: 5601152658778452612, guid: c642fe99abb9aac43b3547ab34498168,
+        type: 3}
+      propertyPath: FrontCameras.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5601152658778452612, guid: c642fe99abb9aac43b3547ab34498168,
         type: 3}
@@ -8689,27 +8789,27 @@ PrefabInstance:
         type: 3}
       propertyPath: LeftWheelEncoders.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2035414870}
     - target: {fileID: 5601152658778452612, guid: c642fe99abb9aac43b3547ab34498168,
         type: 3}
       propertyPath: PositioningSystems.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 774739226}
     - target: {fileID: 5601152658778452612, guid: c642fe99abb9aac43b3547ab34498168,
         type: 3}
       propertyPath: RightWheelEncoders.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1231220414}
     - target: {fileID: 5601152658778452612, guid: c642fe99abb9aac43b3547ab34498168,
         type: 3}
       propertyPath: VehicleControllers.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1181429742}
     - target: {fileID: 5601152658778452612, guid: c642fe99abb9aac43b3547ab34498168,
         type: 3}
       propertyPath: VehicleRigidBodies.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1053544455}
     - target: {fileID: 5601152658778452612, guid: c642fe99abb9aac43b3547ab34498168,
         type: 3}
       propertyPath: TrafficLightControllers.Array.size
@@ -8724,7 +8824,7 @@ PrefabInstance:
         type: 3}
       propertyPath: InertialMeasurementUnits.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1289309124}
     - target: {fileID: 5601152658778452613, guid: c642fe99abb9aac43b3547ab34498168,
         type: 3}
       propertyPath: m_RootOrder
@@ -8810,6 +8910,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pine_A (37)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2503636403554334455, guid: 451d860cead90b64bbbab1639909594c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3023433396663086157, guid: 451d860cead90b64bbbab1639909594c,
         type: 3}
@@ -9204,6 +9309,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pine_A (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2503636403554334455, guid: 451d860cead90b64bbbab1639909594c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3023433396663086157, guid: 451d860cead90b64bbbab1639909594c,
         type: 3}
@@ -10340,6 +10450,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine_A (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 2503636403554334455, guid: 451d860cead90b64bbbab1639909594c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3023433396663086157, guid: 451d860cead90b64bbbab1639909594c,
         type: 3}
       propertyPath: m_RootOrder
@@ -10443,7 +10558,7 @@ PrefabInstance:
     - target: {fileID: 6060788920606015911, guid: e730e362773695e408e48f59e6dff87a,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6870223390090205981, guid: e730e362773695e408e48f59e6dff87a,
         type: 3}
@@ -11479,6 +11594,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine_B (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 1127992084609228112, guid: 34776a9356ed54141bf7fed4fded28a0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5458397801129929743, guid: 34776a9356ed54141bf7fed4fded28a0,
         type: 3}
       propertyPath: m_Enabled
@@ -11609,6 +11729,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine_A (73)
       objectReference: {fileID: 0}
+    - target: {fileID: 2503636403554334455, guid: 451d860cead90b64bbbab1639909594c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3023433396663086157, guid: 451d860cead90b64bbbab1639909594c,
         type: 3}
       propertyPath: m_RootOrder
@@ -11709,6 +11834,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine_A (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 2503636403554334455, guid: 451d860cead90b64bbbab1639909594c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3023433396663086157, guid: 451d860cead90b64bbbab1639909594c,
         type: 3}
       propertyPath: m_RootOrder
@@ -11808,6 +11938,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pine_D (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8316334779356437779, guid: 35e087cfaa0f57244b67615777188d3e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8480816894920273663, guid: 35e087cfaa0f57244b67615777188d3e,
         type: 3}
@@ -12002,6 +12137,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pine_A (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2503636403554334455, guid: 451d860cead90b64bbbab1639909594c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3023433396663086157, guid: 451d860cead90b64bbbab1639909594c,
         type: 3}
@@ -12419,6 +12559,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine_B (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 1127992084609228112, guid: 34776a9356ed54141bf7fed4fded28a0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5458397801129929743, guid: 34776a9356ed54141bf7fed4fded28a0,
         type: 3}
       propertyPath: m_Enabled
@@ -12598,7 +12743,7 @@ PrefabInstance:
     - target: {fileID: 6060788920606015911, guid: e730e362773695e408e48f59e6dff87a,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6870223390090205981, guid: e730e362773695e408e48f59e6dff87a,
         type: 3}
@@ -13180,6 +13325,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine_B (37)
       objectReference: {fileID: 0}
+    - target: {fileID: 1127992084609228112, guid: 34776a9356ed54141bf7fed4fded28a0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5458397801129929743, guid: 34776a9356ed54141bf7fed4fded28a0,
         type: 3}
       propertyPath: m_Enabled
@@ -13220,7 +13370,7 @@ PrefabInstance:
     - target: {fileID: 4012337630082778474, guid: cce4d8667f2436a479759f07084d8ff4,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4388053584151060432, guid: cce4d8667f2436a479759f07084d8ff4,
         type: 3}
@@ -13536,6 +13686,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pine_B (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1127992084609228112, guid: 34776a9356ed54141bf7fed4fded28a0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5458397801129929743, guid: 34776a9356ed54141bf7fed4fded28a0,
         type: 3}
@@ -13905,7 +14060,7 @@ PrefabInstance:
     - target: {fileID: 4012337630082778474, guid: cce4d8667f2436a479759f07084d8ff4,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4388053584151060432, guid: cce4d8667f2436a479759f07084d8ff4,
         type: 3}
@@ -14081,6 +14236,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pine_B (34)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1127992084609228112, guid: 34776a9356ed54141bf7fed4fded28a0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5458397801129929743, guid: 34776a9356ed54141bf7fed4fded28a0,
         type: 3}
@@ -14645,6 +14805,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine_A (52)
       objectReference: {fileID: 0}
+    - target: {fileID: 2503636403554334455, guid: 451d860cead90b64bbbab1639909594c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3023433396663086157, guid: 451d860cead90b64bbbab1639909594c,
         type: 3}
       propertyPath: m_RootOrder
@@ -14815,6 +14980,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine_B (41)
       objectReference: {fileID: 0}
+    - target: {fileID: 1127992084609228112, guid: 34776a9356ed54141bf7fed4fded28a0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5458397801129929743, guid: 34776a9356ed54141bf7fed4fded28a0,
         type: 3}
       propertyPath: m_Enabled
@@ -14844,6 +15014,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pine_A (42)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2503636403554334455, guid: 451d860cead90b64bbbab1639909594c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3023433396663086157, guid: 451d860cead90b64bbbab1639909594c,
         type: 3}
@@ -15174,6 +15349,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: ec0de4e63baf4774b91d8381f32b80fa,
         type: 2}
+    - target: {fileID: 4329528033738662150, guid: 5966acb80ca0e3046a7e6cdc4e671aff,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4329528033738662151, guid: 5966acb80ca0e3046a7e6cdc4e671aff,
         type: 3}
       propertyPath: m_IsActive
@@ -15397,8 +15577,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 617086569657283817, guid: 0cb450bf62e8bdb4caab6a0a88606dca,
         type: 3}
+      propertyPath: HMIType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 617086569657283817, guid: 0cb450bf62e8bdb4caab6a0a88606dca,
+        type: 3}
       propertyPath: MotorTorque
       value: 143
+      objectReference: {fileID: 0}
+    - target: {fileID: 617086569657283817, guid: 0cb450bf62e8bdb4caab6a0a88606dca,
+        type: 3}
+      propertyPath: ThrottleLimit
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 617086569657283821, guid: 0cb450bf62e8bdb4caab6a0a88606dca,
         type: 3}
@@ -15454,6 +15644,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 617086570275005023, guid: 0cb450bf62e8bdb4caab6a0a88606dca,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4583723101428796879, guid: 0cb450bf62e8bdb4caab6a0a88606dca,
         type: 3}
@@ -15530,6 +15725,11 @@ PrefabInstance:
       propertyPath: TerrainMeshes.Array.data[8]
       value: 
       objectReference: {fileID: 216559663}
+    - target: {fileID: 4583723101891398581, guid: 0cb450bf62e8bdb4caab6a0a88606dca,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4583723101891398582, guid: 0cb450bf62e8bdb4caab6a0a88606dca,
         type: 3}
       propertyPath: m_Enabled
@@ -15539,6 +15739,11 @@ PrefabInstance:
         type: 3}
       propertyPath: pointSize
       value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4583723101891398583, guid: 0cb450bf62e8bdb4caab6a0a88606dca,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4583723101996645726, guid: 0cb450bf62e8bdb4caab6a0a88606dca,
         type: 3}
@@ -15563,6 +15768,11 @@ PrefabInstance:
     - target: {fileID: 4583723103221933065, guid: 0cb450bf62e8bdb4caab6a0a88606dca,
         type: 3}
       propertyPath: meshSource
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4583723103221933071, guid: 0cb450bf62e8bdb4caab6a0a88606dca,
+        type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -17096,6 +17306,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine_A (58)
       objectReference: {fileID: 0}
+    - target: {fileID: 2503636403554334455, guid: 451d860cead90b64bbbab1639909594c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3023433396663086157, guid: 451d860cead90b64bbbab1639909594c,
         type: 3}
       propertyPath: m_RootOrder
@@ -17195,6 +17410,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pine_D (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8316334779356437779, guid: 35e087cfaa0f57244b67615777188d3e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8480816894920273663, guid: 35e087cfaa0f57244b67615777188d3e,
         type: 3}
@@ -17592,7 +17812,7 @@ PrefabInstance:
     - target: {fileID: 6060788920606015911, guid: e730e362773695e408e48f59e6dff87a,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6870223390090205981, guid: e730e362773695e408e48f59e6dff87a,
         type: 3}
@@ -18588,6 +18808,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine_A (56)
       objectReference: {fileID: 0}
+    - target: {fileID: 2503636403554334455, guid: 451d860cead90b64bbbab1639909594c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3023433396663086157, guid: 451d860cead90b64bbbab1639909594c,
         type: 3}
       propertyPath: m_RootOrder
@@ -18764,6 +18989,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine_B (32)
       objectReference: {fileID: 0}
+    - target: {fileID: 1127992084609228112, guid: 34776a9356ed54141bf7fed4fded28a0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5458397801129929743, guid: 34776a9356ed54141bf7fed4fded28a0,
         type: 3}
       propertyPath: m_Enabled
@@ -18898,6 +19128,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pine_A (72)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2503636403554334455, guid: 451d860cead90b64bbbab1639909594c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3023433396663086157, guid: 451d860cead90b64bbbab1639909594c,
         type: 3}
@@ -19097,7 +19332,7 @@ PrefabInstance:
     - target: {fileID: 4012337630082778474, guid: cce4d8667f2436a479759f07084d8ff4,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4388053584151060432, guid: cce4d8667f2436a479759f07084d8ff4,
         type: 3}
@@ -19469,6 +19704,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine_B (42)
       objectReference: {fileID: 0}
+    - target: {fileID: 1127992084609228112, guid: 34776a9356ed54141bf7fed4fded28a0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5458397801129929743, guid: 34776a9356ed54141bf7fed4fded28a0,
         type: 3}
       propertyPath: m_Enabled
@@ -19687,6 +19927,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pine_D (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8316334779356437779, guid: 35e087cfaa0f57244b67615777188d3e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8480816894920273663, guid: 35e087cfaa0f57244b67615777188d3e,
         type: 3}
@@ -20182,6 +20427,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine_D (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 8316334779356437779, guid: 35e087cfaa0f57244b67615777188d3e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8480816894920273663, guid: 35e087cfaa0f57244b67615777188d3e,
         type: 3}
       propertyPath: m_Enabled
@@ -20597,6 +20847,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine_B (33)
       objectReference: {fileID: 0}
+    - target: {fileID: 1127992084609228112, guid: 34776a9356ed54141bf7fed4fded28a0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5458397801129929743, guid: 34776a9356ed54141bf7fed4fded28a0,
         type: 3}
       propertyPath: m_Enabled
@@ -20632,6 +20887,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pine_A (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2503636403554334455, guid: 451d860cead90b64bbbab1639909594c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3023433396663086157, guid: 451d860cead90b64bbbab1639909594c,
         type: 3}
@@ -20973,6 +21233,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine_A (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 2503636403554334455, guid: 451d860cead90b64bbbab1639909594c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3023433396663086157, guid: 451d860cead90b64bbbab1639909594c,
         type: 3}
       propertyPath: m_RootOrder
@@ -21072,6 +21337,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pine_A (46)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2503636403554334455, guid: 451d860cead90b64bbbab1639909594c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3023433396663086157, guid: 451d860cead90b64bbbab1639909594c,
         type: 3}
@@ -21343,6 +21613,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine_B (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 1127992084609228112, guid: 34776a9356ed54141bf7fed4fded28a0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5458397801129929743, guid: 34776a9356ed54141bf7fed4fded28a0,
         type: 3}
       propertyPath: m_Enabled
@@ -21471,7 +21746,7 @@ PrefabInstance:
     - target: {fileID: 4012337630082778474, guid: cce4d8667f2436a479759f07084d8ff4,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4388053584151060432, guid: cce4d8667f2436a479759f07084d8ff4,
         type: 3}
@@ -22546,6 +22821,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine_A (43)
       objectReference: {fileID: 0}
+    - target: {fileID: 2503636403554334455, guid: 451d860cead90b64bbbab1639909594c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3023433396663086157, guid: 451d860cead90b64bbbab1639909594c,
         type: 3}
       propertyPath: m_RootOrder
@@ -22829,6 +23109,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pine_A (40)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2503636403554334455, guid: 451d860cead90b64bbbab1639909594c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3023433396663086157, guid: 451d860cead90b64bbbab1639909594c,
         type: 3}
@@ -24905,6 +25190,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine_B (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 1127992084609228112, guid: 34776a9356ed54141bf7fed4fded28a0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5458397801129929743, guid: 34776a9356ed54141bf7fed4fded28a0,
         type: 3}
       propertyPath: m_Enabled
@@ -24954,7 +25244,7 @@ PrefabInstance:
     - target: {fileID: 1513114221594516382, guid: 7cc6bf97504f8fb48975496a8d66208c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 25
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 1513114221594516382, guid: 7cc6bf97504f8fb48975496a8d66208c,
         type: 3}
@@ -25095,6 +25385,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine_B (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1127992084609228112, guid: 34776a9356ed54141bf7fed4fded28a0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5458397801129929743, guid: 34776a9356ed54141bf7fed4fded28a0,
         type: 3}
       propertyPath: m_Enabled
@@ -25135,7 +25430,7 @@ PrefabInstance:
     - target: {fileID: 4012337630082778474, guid: cce4d8667f2436a479759f07084d8ff4,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4388053584151060432, guid: cce4d8667f2436a479759f07084d8ff4,
         type: 3}
@@ -25289,6 +25584,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pine_A (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2503636403554334455, guid: 451d860cead90b64bbbab1639909594c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3023433396663086157, guid: 451d860cead90b64bbbab1639909594c,
         type: 3}
@@ -26072,6 +26372,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine_D (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 8316334779356437779, guid: 35e087cfaa0f57244b67615777188d3e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8480816894920273663, guid: 35e087cfaa0f57244b67615777188d3e,
         type: 3}
       propertyPath: m_Enabled
@@ -26177,6 +26482,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine_C (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 1722164173232303198, guid: 942660f4ebcf9cd438f45122b0ad63eb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2066461308124542692, guid: 942660f4ebcf9cd438f45122b0ad63eb,
         type: 3}
       propertyPath: m_RootOrder
@@ -26262,6 +26572,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4595625198686784103, guid: b496cd33cbbcaf2438f8cc662d43ff6d,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595625198686784103, guid: b496cd33cbbcaf2438f8cc662d43ff6d,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -5
+      objectReference: {fileID: 0}
     - target: {fileID: 4595625198860113579, guid: b496cd33cbbcaf2438f8cc662d43ff6d,
         type: 3}
       propertyPath: m_Name
@@ -26302,6 +26622,36 @@ PrefabInstance:
       propertyPath: Cameras.Array.data[2]
       value: 
       objectReference: {fileID: 476253211}
+    - target: {fileID: 4595625199216015859, guid: b496cd33cbbcaf2438f8cc662d43ff6d,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595625199216015859, guid: b496cd33cbbcaf2438f8cc662d43ff6d,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595625199386348332, guid: b496cd33cbbcaf2438f8cc662d43ff6d,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595625199386348332, guid: b496cd33cbbcaf2438f8cc662d43ff6d,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595625199406692514, guid: b496cd33cbbcaf2438f8cc662d43ff6d,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595625199406692514, guid: b496cd33cbbcaf2438f8cc662d43ff6d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4595625199408275207, guid: b496cd33cbbcaf2438f8cc662d43ff6d,
         type: 3}
       propertyPath: m_Name
@@ -26322,6 +26672,16 @@ PrefabInstance:
       propertyPath: VehicleControllers.Array.data[0]
       value: 
       objectReference: {fileID: 1181429742}
+    - target: {fileID: 4595625199811725683, guid: b496cd33cbbcaf2438f8cc662d43ff6d,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595625199811725683, guid: b496cd33cbbcaf2438f8cc662d43ff6d,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -5
+      objectReference: {fileID: 0}
     - target: {fileID: 4595625199843227400, guid: b496cd33cbbcaf2438f8cc662d43ff6d,
         type: 3}
       propertyPath: SceneLight
@@ -26352,6 +26712,46 @@ PrefabInstance:
       propertyPath: SocketIO
       value: 
       objectReference: {fileID: 2126180526}
+    - target: {fileID: 4595625199946445228, guid: b496cd33cbbcaf2438f8cc662d43ff6d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595625199949990801, guid: b496cd33cbbcaf2438f8cc662d43ff6d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595625200037280640, guid: b496cd33cbbcaf2438f8cc662d43ff6d,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595625200037280640, guid: b496cd33cbbcaf2438f8cc662d43ff6d,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595625200052633649, guid: b496cd33cbbcaf2438f8cc662d43ff6d,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595625200052633649, guid: b496cd33cbbcaf2438f8cc662d43ff6d,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595625200129697015, guid: b496cd33cbbcaf2438f8cc662d43ff6d,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595625200129697015, guid: b496cd33cbbcaf2438f8cc662d43ff6d,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -5
+      objectReference: {fileID: 0}
     - target: {fileID: 4595625200228396156, guid: b496cd33cbbcaf2438f8cc662d43ff6d,
         type: 3}
       propertyPath: m_Name
@@ -26382,6 +26782,16 @@ PrefabInstance:
       propertyPath: UQ_HDRPSettings
       value: 
       objectReference: {fileID: 1043308823}
+    - target: {fileID: 4595625200297008415, guid: b496cd33cbbcaf2438f8cc662d43ff6d,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595625200297008415, guid: b496cd33cbbcaf2438f8cc662d43ff6d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4595625200329799038, guid: b496cd33cbbcaf2438f8cc662d43ff6d,
         type: 3}
       propertyPath: GPS
@@ -26601,7 +27011,7 @@ PrefabInstance:
     - target: {fileID: 6060788920606015911, guid: e730e362773695e408e48f59e6dff87a,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6870223390090205981, guid: e730e362773695e408e48f59e6dff87a,
         type: 3}
@@ -26702,6 +27112,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pine_A (44)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2503636403554334455, guid: 451d860cead90b64bbbab1639909594c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3023433396663086157, guid: 451d860cead90b64bbbab1639909594c,
         type: 3}
@@ -27043,6 +27458,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine_A (47)
       objectReference: {fileID: 0}
+    - target: {fileID: 2503636403554334455, guid: 451d860cead90b64bbbab1639909594c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3023433396663086157, guid: 451d860cead90b64bbbab1639909594c,
         type: 3}
       propertyPath: m_RootOrder
@@ -27313,6 +27733,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pine_B (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1127992084609228112, guid: 34776a9356ed54141bf7fed4fded28a0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5458397801129929743, guid: 34776a9356ed54141bf7fed4fded28a0,
         type: 3}
@@ -27907,6 +28332,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine_A (53)
       objectReference: {fileID: 0}
+    - target: {fileID: 2503636403554334455, guid: 451d860cead90b64bbbab1639909594c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3023433396663086157, guid: 451d860cead90b64bbbab1639909594c,
         type: 3}
       propertyPath: m_RootOrder
@@ -28467,6 +28897,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pine_A (57)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2503636403554334455, guid: 451d860cead90b64bbbab1639909594c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3023433396663086157, guid: 451d860cead90b64bbbab1639909594c,
         type: 3}
@@ -29170,6 +29605,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine_B (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 1127992084609228112, guid: 34776a9356ed54141bf7fed4fded28a0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5458397801129929743, guid: 34776a9356ed54141bf7fed4fded28a0,
         type: 3}
       propertyPath: m_Enabled
@@ -29199,6 +29639,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pine_A (49)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2503636403554334455, guid: 451d860cead90b64bbbab1639909594c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3023433396663086157, guid: 451d860cead90b64bbbab1639909594c,
         type: 3}
@@ -29673,6 +30118,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine_A (51)
       objectReference: {fileID: 0}
+    - target: {fileID: 2503636403554334455, guid: 451d860cead90b64bbbab1639909594c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3023433396663086157, guid: 451d860cead90b64bbbab1639909594c,
         type: 3}
       propertyPath: m_RootOrder
@@ -29986,6 +30436,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pine_A (41)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2503636403554334455, guid: 451d860cead90b64bbbab1639909594c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3023433396663086157, guid: 451d860cead90b64bbbab1639909594c,
         type: 3}
@@ -30323,6 +30778,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine_A (48)
       objectReference: {fileID: 0}
+    - target: {fileID: 2503636403554334455, guid: 451d860cead90b64bbbab1639909594c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3023433396663086157, guid: 451d860cead90b64bbbab1639909594c,
         type: 3}
       propertyPath: m_RootOrder
@@ -30422,6 +30882,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pine_A (50)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2503636403554334455, guid: 451d860cead90b64bbbab1639909594c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3023433396663086157, guid: 451d860cead90b64bbbab1639909594c,
         type: 3}
@@ -30761,7 +31226,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2102009159
 Transform:
   m_ObjectHideFlags: 0
@@ -31308,6 +31773,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pine_B (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1127992084609228112, guid: 34776a9356ed54141bf7fed4fded28a0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5458397801129929743, guid: 34776a9356ed54141bf7fed4fded28a0,
         type: 3}
@@ -32300,6 +32770,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Intensity
       value: 25000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5958816579030360461, guid: d52abfc05749c4eeb92e7e9896a576c8,
+        type: 3}
+      propertyPath: useVolumetric
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5958816579030360461, guid: d52abfc05749c4eeb92e7e9896a576c8,
         type: 3}

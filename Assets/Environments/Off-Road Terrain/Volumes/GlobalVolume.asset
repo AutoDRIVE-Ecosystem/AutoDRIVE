@@ -562,11 +562,11 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: 1
   limitMin:
-    m_OverrideState: 1
-    m_Value: 10
+    m_OverrideState: 0
+    m_Value: 0
   limitMax:
-    m_OverrideState: 1
-    m_Value: 13
+    m_OverrideState: 0
+    m_Value: 7
   curveMap:
     m_OverrideState: 0
     m_Value:
@@ -737,6 +737,7 @@ MonoBehaviour:
   m_Name: HDShadowSettings
   m_EditorClassIdentifier: 
   active: 1
+  interCascadeBorders: 1
   maxShadowDistance:
     m_OverrideState: 1
     m_Value: 6000
@@ -757,16 +758,16 @@ MonoBehaviour:
     m_Value: 0.146
   cascadeShadowBorder0:
     m_OverrideState: 1
-    m_Value: 0.011
+    m_Value: 0.005515218
   cascadeShadowBorder1:
     m_OverrideState: 1
-    m_Value: 0.02
+    m_Value: 0.017309153
   cascadeShadowBorder2:
     m_OverrideState: 1
-    m_Value: 0.023
+    m_Value: 0.014684905
   cascadeShadowBorder3:
     m_OverrideState: 1
-    m_Value: 0.043
+    m_Value: 0.025452232
 --- !u!114 &7079608298731329183
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -812,6 +813,9 @@ MonoBehaviour:
     m_Value:
       serializedVersion: 2
       m_Bits: 4294967295
+  specularOcclusion:
+    m_OverrideState: 0
+    m_Value: 0.5
   occluderMotionRejection:
     m_OverrideState: 0
     m_Value: 1

@@ -6833,6 +6833,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4595625199076157987, guid: b496cd33cbbcaf2438f8cc662d43ff6d,
         type: 3}
+      propertyPath: Cameras.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595625199076157987, guid: b496cd33cbbcaf2438f8cc662d43ff6d,
+        type: 3}
       propertyPath: Cameras.Array.data[0]
       value: 
       objectReference: {fileID: 6818765620292521474}
@@ -6851,6 +6856,11 @@ PrefabInstance:
       propertyPath: Cameras.Array.data[3]
       value: 
       objectReference: {fileID: 476253211}
+    - target: {fileID: 4595625199076157987, guid: b496cd33cbbcaf2438f8cc662d43ff6d,
+        type: 3}
+      propertyPath: Cameras.Array.data[4]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4595625199665121080, guid: b496cd33cbbcaf2438f8cc662d43ff6d,
         type: 3}
       propertyPath: VehicleController
@@ -47002,6 +47012,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e290d522300c2a48b426fbf10a0dc5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HMIType: 3
   speedText: {fileID: 6818765620697018190}
   gearText: {fileID: 6818765619098380183}
   Wheelbase: 3.175
@@ -47449,6 +47460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16d42172b8710de4494d9433386d5be8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HMIType: 0
   Vehicle: {fileID: 7990106369019682543}
   VehicleRigidBody: {fileID: 7990106369019682542}
   COM: {x: 0, y: 0.32666, z: 1.745285}
@@ -47461,6 +47473,7 @@ MonoBehaviour:
   RearLeftWheelTransform: {fileID: 0}
   RearRightWheelTransform: {fileID: 0}
   driveType: 0
+  ThrottleLimit: 1
   SteeringRate: 315.789
   Wheelbase: 3090
   TrackWidth: 1734

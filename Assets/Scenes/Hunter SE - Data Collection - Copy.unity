@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.085963055, g: 0.10265668, b: 0.16410965, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -10941,6 +10941,12 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4329528033738662149, guid: 5966acb80ca0e3046a7e6cdc4e671aff,
+        type: 3}
+      propertyPath: sharedProfile
+      value: 
+      objectReference: {fileID: 11400000, guid: ec0de4e63baf4774b91d8381f32b80fa,
+        type: 2}
     - target: {fileID: 4329528033738662151, guid: 5966acb80ca0e3046a7e6cdc4e671aff,
         type: 3}
       propertyPath: m_IsActive
@@ -29002,6 +29008,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16d42172b8710de4494d9433386d5be8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HMIType: 0
   Vehicle: {fileID: 3966812653300628637}
   VehicleRigidBody: {fileID: 3966812653300628633}
   COM: {x: 0, y: 0.09, z: -0.055}
@@ -29014,6 +29021,7 @@ MonoBehaviour:
   RearLeftWheelTransform: {fileID: 257515740}
   RearRightWheelTransform: {fileID: 1913946502}
   driveType: 3
+  ThrottleLimit: 1
   SteeringRate: 315.789
   Wheelbase: 550
   TrackWidth: 520

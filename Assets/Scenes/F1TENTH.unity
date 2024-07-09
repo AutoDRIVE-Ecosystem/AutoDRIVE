@@ -5399,12 +5399,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ConnectionButton: {fileID: 541364192}
   ConnectionLabel: {fileID: 934434870}
-  Vehicles: []
+  WeatherAPI: 0
+  Weather: []
+  TimeOfDayAPI: 0
+  TimeOfDay: []
+  CoSimManagers: []
   VehicleRigidBodies: []
   VehicleControllers:
   - {fileID: 1284891601}
   AutomobileControllers: []
   VehicleLightings: []
+  CarLightings: []
+  ROVLightings: []
   LeftWheelEncoders:
   - {fileID: 1735463099}
   RightWheelEncoders:
@@ -5420,6 +5426,7 @@ MonoBehaviour:
   - {fileID: 1105803435}
   RearCameras: []
   SideCameras: 0
+  CollisionDetection: 0
   TrafficLightControllers: []
 --- !u!114 &971678325
 MonoBehaviour:
@@ -11703,6 +11710,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5604276903648274154, guid: 67ce5da1c1e765d449ca04bffdf930ec,
+        type: 3}
+      propertyPath: HMIType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5604276903648274154, guid: 67ce5da1c1e765d449ca04bffdf930ec,
         type: 3}
       propertyPath: MotorTorque
