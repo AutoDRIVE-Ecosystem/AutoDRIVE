@@ -68,7 +68,7 @@ The simulator can be exploited by the users (particularly targeting students and
 
 2. Install AutoDRIVE Simulator (from source):
      
-    - Clone the Clone `AutoDRIVE-Simulator` branch of the `AutoDRIVE` repository:
+    - Clone `AutoDRIVE-Simulator` branch of the `AutoDRIVE` repository:
     
       ```bash
       $ git clone --single-branch --branch AutoDRIVE-Simulator https://github.com/Tinker-Twins/AutoDRIVE.git
