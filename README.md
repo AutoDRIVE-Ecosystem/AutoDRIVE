@@ -1,9 +1,9 @@
 <img src="Images/AutoDRIVE-Banner.jpg">
 
 <p align="center">
-<img src="https://badgen.net/github/stars/Tinker-Twins/AutoDRIVE?icon=github&label=Stars">
-<img src="https://badgen.net/github/forks/Tinker-Twins/AutoDRIVE?icon=github&label=Forks">
-<img src="https://img.shields.io/github/downloads/Tinker-Twins/AutoDRIVE/total?color=blue&label=Downloads&logo=github&logoColor=white">
+<img alt='GitHub Stars' src="https://img.shields.io/github/stars/Tinker-Twins/AutoDRIVE?style=flat&color=blue&label=Stars&logo=github&logoColor=white">
+<img alt='GitHub Forks' src="https://img.shields.io/github/forks/Tinker-Twins/AutoDRIVE?style=flat&color=blue&label=Forks&logo=github&logoColor=white">
+<img alt='GitHub Downloads' src="https://img.shields.io/github/downloads/Tinker-Twins/AutoDRIVE/total?color=blue&label=Downloads&logo=github&logoColor=white">
 <img alt='GitHub Clones' src='https://img.shields.io/badge/dynamic/json?color=blue&label=Clones&query=count&url=https://gist.githubusercontent.com/Tinker-Twins/e2855ef0fa018279b206045be92424cb/raw/clone.json&logo=github'>
 </p>
 
