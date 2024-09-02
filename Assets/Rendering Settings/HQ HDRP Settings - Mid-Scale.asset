@@ -931,16 +931,16 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 1024
   shadowMultiplier:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 1
   shadowTint:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: {r: 0, g: 0, b: 0, a: 1}
   shadowResolution:
     m_OverrideState: 0
     m_Value: 256
   shadowSize:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 500
   layerA:
     cloudMap:
@@ -960,7 +960,7 @@ MonoBehaviour:
       m_Value: 0
     rotation:
       m_OverrideState: 1
-      m_Value: 0
+      m_Value: 120
     tint:
       m_OverrideState: 1
       m_Value: {r: 1, g: 1, b: 1, a: 1}
@@ -997,7 +997,7 @@ MonoBehaviour:
       m_OverrideState: 1
       m_Value: 0.5
     castShadows:
-      m_OverrideState: 1
+      m_OverrideState: 0
       m_Value: 0
   layerB:
     cloudMap:

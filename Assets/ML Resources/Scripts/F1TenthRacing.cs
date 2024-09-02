@@ -29,7 +29,7 @@ public class F1TenthRacing : Agent
     // public Transform OV_SpawnLocation;
 
     private Rigidbody EV_Rigidbody;
-    private Rigidbody OV_Rigidbody;
+    // private Rigidbody OV_Rigidbody;
 
     private int LapCount = 0; // Measure lap count
     private float LapTime = 0; // Measure lap time

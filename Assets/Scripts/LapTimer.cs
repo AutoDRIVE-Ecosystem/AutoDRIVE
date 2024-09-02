@@ -11,11 +11,13 @@ public class LapTimer : MonoBehaviour
     public Text txtLapCount;
     public int checkpointCount = 19;
 
+    public int LapCount = 0; // Measure lap count
+    public float LapTime = 0; // Measure lap time
+    public float LastLapTime = 1e+6f; // Holds last lap time
+    public float BestLapTime = 1e+6f; // Holds best lap time
+
     private Rigidbody VehicleRigidbody;
     private int CheckpointCount = 0; // Number of checkpoints
-    private int LapCount = 0; // Measure lap count
-    private float LapTime = 0; // Measure lap time
-    private float BestLapTime = 1e+6f; // Holds best lap time
     private bool FinishLineFlag = false; // Finish line flag
     private bool CheckpointFlag = false; // Checkpoint flag
     private bool CollisionFlag = false; // Collision flag
@@ -38,6 +40,7 @@ public class LapTimer : MonoBehaviour
             LapCount += 1;
             if (LapCount < 10) txtLapCount.text = "0" + LapCount.ToString();
             else txtLapCount.text = LapCount.ToString();
+            LastLapTime = LapTime;
             if (LapTime < 10) txtLastLap.text = "0" + LapTime.ToString("f1");
             else txtLastLap.text = LapTime.ToString("f1");
             if (LapTime < BestLapTime)

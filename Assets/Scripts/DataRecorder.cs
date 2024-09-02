@@ -26,6 +26,8 @@ public class DataRecorder : MonoBehaviour
     public GameObject[] Vehicles; // Vehicle gameobject references
     public Rigidbody[] VehicleRigidBodies; // Rigidbody component of the vehicles
     public VehicleController[] VehicleControllers; // `VehicleController` references
+    public bool LogAutomobileController = false; // Flag to enable logging information from `AutomobileController`
+    public AutomobileController[] AutomobileControllers; // `VehicleController` references
     public VehicleLighting[] VehicleLightings; // `VehicleLighting` references
     public WheelEncoder[] LeftWheelEncoders; // `WheelEncoder` references for left wheel
     public WheelEncoder[] RightWheelEncoders; // `WheelEncoder` references for right wheel
@@ -216,8 +218,14 @@ public class DataRecorder : MonoBehaviour
                 sample.timeStamp = System.DateTime.Now.ToString("yyyy_MM_dd_HH_mm_ss_fff");
                 sample.position = Vehicles[i].transform.position;
                 sample.rotation = Vehicles[i].transform.rotation;
-                sample.throttle = VehicleControllers[i].CurrentThrottle;
-                sample.steeringAngle = VehicleControllers[i].CurrentSteeringAngle;
+                if(LogAutomobileController) sample.throttle = AutomobileControllers[i].CurrentThrottle;
+                else sample.throttle = VehicleControllers[i].CurrentThrottle;
+                if (LogAutomobileController) sample.brake = AutomobileControllers[i].CurrentBrake;
+                else sample.brake = (VehicleControllers[i].CurrentThrottle == 0) ? 1 : 0;
+                if (LogAutomobileController) sample.handBrake = AutomobileControllers[i].CurrentHandbrake;
+                else sample.handBrake = 0;
+                if (LogAutomobileController) sample.steeringAngle = AutomobileControllers[i].CurrentSteeringAngle;
+                else sample.steeringAngle = VehicleControllers[i].CurrentSteeringAngle;
                 sample.leftEncoderTicks = LeftWheelEncoders[i].Ticks;
                 sample.rightEncoderTicks = RightWheelEncoders[i].Ticks;;
                 sample.positionX = PositioningSystems[i].CurrentPosition[0];
@@ -306,8 +314,8 @@ public class DataRecorder : MonoBehaviour
                     LIDARRangeArray = "";
                 }
                 // Log data
-            		string row = string.Format("{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12},{13},{14},{15},{16},{17},{18},{19},{20}\n",
-                        sample.timeStamp, sample.throttle, sample.steeringAngle, sample.leftEncoderTicks, sample.rightEncoderTicks,
+            		string row = string.Format("{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12},{13},{14},{15},{16},{17},{18},{19},{20},{21},{22}\n",
+                        sample.timeStamp, sample.throttle, sample.brake, sample.handBrake, sample.steeringAngle, sample.leftEncoderTicks, sample.rightEncoderTicks,
                         sample.positionX, sample.positionY, sample.positionZ, sample.roll, sample.pitch, sample.yaw, sample.velocity,
                         sample.angularX, sample.angularY, sample.angularZ, sample.accelX, sample.accelY, sample.accelZ,
                         FrontCameraPath, RearCameraPath, LIDARRangeArray);
@@ -384,6 +392,8 @@ internal class VehicleDataSample
     public Quaternion rotation;
     // Sensory data
     public float throttle;
+    public float brake;
+    public float handBrake;
     public float steeringAngle;
     public float leftEncoderTicks;
     public float rightEncoderTicks;

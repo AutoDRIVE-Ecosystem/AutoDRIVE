@@ -26,17 +26,19 @@ public class IMU : MonoBehaviour
     private Vector3 EulerAngles = new Vector3 (0,0,0);
     private Vector3 OrientationEulerAngles = new Vector3 (0,0,0);
     private Vector3 AngularVelocity = new Vector3 (0,0,0);
-    private Vector3 CurrentLinearVelocity = new Vector3 (0,0,0);
-    private Vector3 PreviousLinearVelocity = new Vector3 (0,0,0);
+    private Vector3 CurrentVelocity = new Vector3 (0,0,0);
+    private Vector3 PreviousVelocity = new Vector3 (0,0,0);
     private Vector3 LinearAcceleration = new Vector3 (0,0,0);
 
     private float[] OrientationQuaternionArray = new float[4];
     private float[] OrientationEulerAnglesArray = new float[3];
+    private float[] LinearVelocityArray = new float[3];
     private float[] AngularVelocityArray = new float[3];
     private float[] LinearAccelerationArray = new float[3];
 
     public float[] CurrentOrientationQuaternion{get{return OrientationQuaternionArray;}}
     public float[] CurrentOrientationEulerAngles{get{return OrientationEulerAnglesArray;}}
+    public float[] CurrentLinearVelocity { get { return LinearVelocityArray; } }
     public float[] CurrentAngularVelocity{get{return AngularVelocityArray;}}
     public float[] CurrentLinearAcceleration{get{return LinearAccelerationArray;}}
 
@@ -70,13 +72,17 @@ public class IMU : MonoBehaviour
         AngularVelocityArray[2] = -AngularVelocity.y;
         //Debug.Log("Angular Velocity [x: " + AngularVelocityArray[0] + " y: " + AngularVelocityArray[1] + " z: " + AngularVelocityArray[2] + "]");
 
-        // Linear Acceleration (m/s^2)
-        CurrentLinearVelocity = VehicleRigidBody.transform.InverseTransformDirection(VehicleRigidBody.velocity);
-        LinearAcceleration = (CurrentLinearVelocity-PreviousLinearVelocity)/(Time.deltaTime);
-        PreviousLinearVelocity = CurrentLinearVelocity;
+        // Linear Velocity (m/s) & Acceleration (m/s^2)
+        CurrentVelocity = VehicleRigidBody.transform.InverseTransformDirection(VehicleRigidBody.velocity);
+        LinearVelocityArray[0] = CurrentVelocity.z;
+        LinearVelocityArray[1] = -CurrentVelocity.x;
+        LinearVelocityArray[2] = CurrentVelocity.y;
+        LinearAcceleration = (CurrentVelocity - PreviousVelocity)/(Time.deltaTime);
+        PreviousVelocity = CurrentVelocity;
         LinearAccelerationArray[0] = LinearAcceleration.z;
         LinearAccelerationArray[1] = -LinearAcceleration.x;
         LinearAccelerationArray[2] = LinearAcceleration.y;
+        //Debug.Log("Linear Velocity [x: " + LinearVelocityArray[0] + " y: " + LinearVelocityArray[1] + " z: " + LinearVelocityArray[2] + "]");
         //Debug.Log("Linear Acceleration [x: " + LinearAccelerationArray[0] + " y: " + LinearAccelerationArray[1] + " z: " + LinearAccelerationArray[2] + "]");
     }
 }
