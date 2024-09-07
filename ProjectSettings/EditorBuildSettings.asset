@@ -110,13 +110,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Hunter SE - Data Collection - Copy.unity
     guid: ff1afea9eb61e7e4b98bf855975bec3b
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/RZR - Dirt Road.unity
     guid: 8fd1b739f7a8997479c0fae39becda18
   - enabled: 0
     path: Assets/Scenes/Hunter SE - Greensward - SRS.unity
     guid: 897553e271ff6014cafcf0b6248c381e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Hunter SE - Greensward with Obstacles.unity
     guid: 874525c92adaf4045ad1950ca3c3aa26
   m_configObjects:

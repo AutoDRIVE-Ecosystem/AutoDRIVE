@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class RandomizePose : MonoBehaviour
 {
+
+    public bool LocalTF = false;
     public int UpdateRate = 10; // Update rate w.r.t. the framerate
     public float xMinLimit = 0f;
     public float xMaxLimit = 0f;
@@ -34,7 +36,8 @@ public class RandomizePose : MonoBehaviour
         if (frames % UpdateRate == 0) {
         position = new Vector3(Random.Range(xMinLimit, xMaxLimit), Random.Range(yMinLimit, yMaxLimit), Random.Range(zMinLimit, zMaxLimit));
         orientation = new Vector3(Random.Range(rollMinLimit, rollMaxLimit), Random.Range(pitchMinLimit, pitchMaxLimit), Random.Range(yawMinLimit, yawMaxLimit));
-        transform.SetPositionAndRotation(position, Quaternion.Euler(orientation));
+        if (!LocalTF) transform.SetPositionAndRotation(position, Quaternion.Euler(orientation));
+        else transform.SetLocalPositionAndRotation(position, Quaternion.Euler(orientation));
         }
     }
 }
