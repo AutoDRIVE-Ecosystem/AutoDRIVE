@@ -26,7 +26,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/F1TENTH.unity
     guid: 0a21737613f801d49901ad46861283fb
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/F1TENTH - Sim Racing.unity
     guid: 8d2c6e16fe73e29489bb9a822f092616
   - enabled: 0
@@ -110,7 +110,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Hunter SE - Data Collection - Copy.unity
     guid: ff1afea9eb61e7e4b98bf855975bec3b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/RZR - Dirt Road.unity
     guid: 8fd1b739f7a8997479c0fae39becda18
   - enabled: 0
@@ -119,6 +119,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Hunter SE - Greensward with Obstacles.unity
     guid: 874525c92adaf4045ad1950ca3c3aa26
+  - enabled: 0
+    path: Assets/Scenes/VSR - RZR Convoy Data Collectrion.unity
+    guid: 6ee3f53d71131de4b8302227218b08cc
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: aa9f1dccb27d10b45a01eba82df6fd1e,
       type: 2}

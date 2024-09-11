@@ -230,8 +230,11 @@ public class DataRecorder : MonoBehaviour
                 sample.timeStamp = System.DateTime.Now.ToString("yyyy_MM_dd_HH_mm_ss_fff");
                 sample.VehiclePosition = Vehicles[i].transform.position;
                 sample.VehicleRotation = Vehicles[i].transform.rotation;
-                sample.CameraPosition = NonFixedCameras[i].transform.position;
-                sample.CameraRotation = NonFixedCameras[i].transform.rotation;
+                if (NonFixedCameras.Length != 0)
+                {
+                    sample.CameraPosition = NonFixedCameras[i].transform.position;
+                    sample.CameraRotation = NonFixedCameras[i].transform.rotation;
+                }
                 if (LogAutomobileController) sample.throttle = AutomobileControllers[i].CurrentThrottle;
                 else sample.throttle = VehicleControllers[i].CurrentThrottle;
                 if (LogAutomobileController) sample.brake = AutomobileControllers[i].CurrentBrake;
@@ -255,18 +258,21 @@ public class DataRecorder : MonoBehaviour
                 sample.accelX = InertialMeasurementUnits[i].CurrentLinearAcceleration[0];
                 sample.accelY = InertialMeasurementUnits[i].CurrentLinearAcceleration[1];
                 sample.accelZ = InertialMeasurementUnits[i].CurrentLinearAcceleration[2];
-                sample.Cam0PosX = Transforms[0].CurrentPosition[0];
-                sample.Cam0PosY = Transforms[0].CurrentPosition[1];
-                sample.Cam0PosZ = Transforms[0].CurrentPosition[2];
-                sample.Cam0RotX = Transforms[0].CurrentOrientation[0];
-                sample.Cam0RotY = Transforms[0].CurrentOrientation[1];
-                sample.Cam0RotZ = Transforms[0].CurrentOrientation[2];
-                sample.Cam1PosX = Transforms[1].CurrentPosition[0];
-                sample.Cam1PosY = Transforms[1].CurrentPosition[1];
-                sample.Cam1PosZ = Transforms[1].CurrentPosition[2];
-                sample.Cam1RotX = Transforms[1].CurrentOrientation[0];
-                sample.Cam1RotY = Transforms[1].CurrentOrientation[1];
-                sample.Cam1RotZ = Transforms[1].CurrentOrientation[2];
+                if (Transforms.Length != 0)
+                {
+                    sample.Cam0PosX = Transforms[0].CurrentPosition[0];
+                    sample.Cam0PosY = Transforms[0].CurrentPosition[1];
+                    sample.Cam0PosZ = Transforms[0].CurrentPosition[2];
+                    sample.Cam0RotX = Transforms[0].CurrentOrientation[0];
+                    sample.Cam0RotY = Transforms[0].CurrentOrientation[1];
+                    sample.Cam0RotZ = Transforms[0].CurrentOrientation[2];
+                    sample.Cam1PosX = Transforms[1].CurrentPosition[0];
+                    sample.Cam1PosY = Transforms[1].CurrentPosition[1];
+                    sample.Cam1PosZ = Transforms[1].CurrentPosition[2];
+                    sample.Cam1RotX = Transforms[1].CurrentOrientation[0];
+                    sample.Cam1RotY = Transforms[1].CurrentOrientation[1];
+                    sample.Cam1RotZ = Transforms[1].CurrentOrientation[2];
+                }
 
                 VehicleDataSamples[i].Enqueue(sample);
                 sample = null; // Nullify the `sample` variable to avoid recording same data in next loop (may or may not be needed)
@@ -301,8 +307,11 @@ public class DataRecorder : MonoBehaviour
                 // Pysically move the vehicle(s) to get the correct camera frame(s)
                 Vehicles[i].transform.position = sample.VehiclePosition;
                 Vehicles[i].transform.rotation = sample.VehicleRotation;
-                NonFixedCameras[i].transform.position = sample.CameraPosition;
-                NonFixedCameras[i].transform.rotation = sample.CameraRotation;
+                if (NonFixedCameras.Length != 0)
+                {
+                    NonFixedCameras[i].transform.position = sample.CameraPosition;
+                    NonFixedCameras[i].transform.rotation = sample.CameraRotation;
+                }
                 // Update recorded velocity variable for i-th vehicle
                 if (VehicleLightings.Length != 0) VehicleLightings[i].RecordedVelocity = sample.velocity;
                 // Capture and store the camera frame(s)
@@ -343,13 +352,19 @@ public class DataRecorder : MonoBehaviour
                     LIDARRangeArray = "";
                 }
                 // Log data
-            		string row = string.Format("{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12},{13},{14},{15},{16},{17},{18},{19},{20},{21},{22},{23},{24},{25},{26},{27},{28},{29},{30},{31},{32},{33},{34}\n",
+            	string row = string.Format("{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12},{13},{14},{15},{16},{17},{18},{19}\n",
+                    sample.timeStamp, sample.throttle, sample.steeringAngle, sample.leftEncoderTicks, sample.rightEncoderTicks,
+                    sample.positionX, sample.positionY, sample.positionZ, sample.roll, sample.pitch, sample.yaw, sample.velocity,
+                    sample.angularX, sample.angularY, sample.angularZ, sample.accelX, sample.accelY, sample.accelZ,
+                    FrontCameraPath,
+                    LIDARRangeArray);
+                /*string row = string.Format("{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12},{13},{14},{15},{16},{17},{18},{19},{20},{21},{22},{23},{24},{25},{26},{27},{28},{29},{30},{31},{32},{33},{34}\n",
                         sample.timeStamp, sample.throttle, sample.brake, sample.handBrake, sample.steeringAngle, sample.leftEncoderTicks, sample.rightEncoderTicks,
                         sample.positionX, sample.positionY, sample.positionZ, sample.roll, sample.pitch, sample.yaw, sample.velocity,
                         sample.angularX, sample.angularY, sample.angularZ, sample.accelX, sample.accelY, sample.accelZ,
                         sample.Cam0PosX, sample.Cam0PosY, sample.Cam0PosZ, sample.Cam0RotX, sample.Cam0RotY, sample.Cam0RotZ, FrontCameraPath,
-                        sample.Cam1PosX, sample.Cam1PosY, sample.Cam1PosZ, sample.Cam1RotX, sample.Cam1RotY, sample.Cam1RotZ, RearCameraPath, LIDARRangeArray);
-            		File.AppendAllText(Path.Combine(saveLocation, VehicleDataFileNames[i]), row);
+                        sample.Cam1PosX, sample.Cam1PosY, sample.Cam1PosZ, sample.Cam1RotX, sample.Cam1RotY, sample.Cam1RotZ, RearCameraPath, LIDARRangeArray);*/
+                File.AppendAllText(Path.Combine(saveLocation, VehicleDataFileNames[i]), row);
                 LIDARRangeArray = ""; // Nullify the `LIDARRangeArray` variable to avoid concatinating new data with the old one
                 // Yield after each pass to avoid freezing the simulator upon entering the while loop
                 yield return new WaitForSeconds(0.000f);
@@ -357,8 +372,11 @@ public class DataRecorder : MonoBehaviour
             // Reset the vehicle(s) to corresponding saved pose parameters [sanity check]
             Vehicles[i].transform.position = saved_vehicle_positions[i];
             Vehicles[i].transform.rotation = saved_vehicle_rotations[i];
-            NonFixedCameras[i].transform.position = saved_camera_positions[i];
-            NonFixedCameras[i].transform.rotation = saved_camera_rotations[i];
+            if (NonFixedCameras.Length != 0)
+            {
+                NonFixedCameras[i].transform.position = saved_camera_positions[i];
+                NonFixedCameras[i].transform.rotation = saved_camera_rotations[i];
+            }
             VehicleRigidBodies[i].velocity = Vector3.zero;
         }
         // Write data from all traffic lights to disk
@@ -383,8 +401,11 @@ public class DataRecorder : MonoBehaviour
         {
             Vehicles[i].transform.position = saved_vehicle_positions[i];
             Vehicles[i].transform.rotation = saved_vehicle_rotations[i];
-            NonFixedCameras[i].transform.position = saved_camera_positions[i];
-            NonFixedCameras[i].transform.rotation = saved_camera_rotations[i];
+            if (NonFixedCameras.Length != 0)
+            {
+                NonFixedCameras[i].transform.position = saved_camera_positions[i];
+                NonFixedCameras[i].transform.rotation = saved_camera_rotations[i];
+            }
             VehicleRigidBodies[i].velocity = Vector3.zero;
         }
     }

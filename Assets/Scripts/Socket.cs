@@ -42,7 +42,6 @@ public class Socket : MonoBehaviour
     public bool SideCameras = false; // Rename front/rear camera frames as left/right
     private float VehicleSpeed = 0.0f; // Vehicle speed
     public LapTimer[] LapTimers; // Lap timer references
-    public VehicleRespawner[] VehicleRespawners; // Vehicle respawner references
 
     public TLController[] TrafficLightControllers; // Traffic light controller references
 
@@ -323,13 +322,7 @@ public class Socket : MonoBehaviour
                     data["V"+(i+1).ToString()+" Lap Time"] = LapTimers[i].LapTime.ToString("F4"); // Get lap time
                     data["V"+(i+1).ToString()+" Last Lap Time"] = LapTimers[i].LastLapTime.ToString("F4"); // Get last lap count
                     data["V"+(i+1).ToString()+" Best Lap Time"] = LapTimers[i].BestLapTime.ToString("F4"); // Get best lap time
-                }
-            }
-            if (VehicleRespawners.Length != 0)
-            {
-                for (int i = 0; i < VehicleRespawners.Length; i++)
-                {
-                    data["V"+(i+1).ToString()+" Collisions"] = VehicleRespawners[i].CollisionCount.ToString(); // Get collision count
+                    data["V"+(i+1).ToString() + " Collisions"] = LapTimers[i].CollisionCount.ToString(); // Get collision count
                 }
             }
             socket.Emit("Bridge", new JSONObject(data)); // Write data to server
