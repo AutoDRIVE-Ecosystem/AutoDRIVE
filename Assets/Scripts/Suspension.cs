@@ -25,7 +25,7 @@ public class Suspension : MonoBehaviour
 		m_Rigidbody = GetComponent<Rigidbody> ();
 	}
 
-	void Update ()
+	void FixedUpdate ()
 	{
 		// Work out the stiffness and damper parameters based on the better spring model.
 		foreach (WheelCollider wc in GetComponentsInChildren<WheelCollider>()) {

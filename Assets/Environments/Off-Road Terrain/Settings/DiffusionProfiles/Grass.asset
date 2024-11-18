@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Grass
   m_EditorClassIdentifier: 
   profile:
-    scatteringDistance: {r: 1782.8878, g: 1782.8878, b: 1782.8878, a: 1}
+    scatteringDistance: {r: 0.7490196, g: 0.7490196, b: 0.7490196, a: 1}
+    scatteringDistanceMultiplier: 2380.2952
     transmissionTint: {r: 0.58521426, g: 1, b: 0, a: 1}
     texturingMode: 1
     transmissionMode: 1
@@ -21,4 +22,4 @@ MonoBehaviour:
     worldScale: 1
     ior: 1.01
     hash: 1081208981
-  m_Version: 1
+  m_Version: 2

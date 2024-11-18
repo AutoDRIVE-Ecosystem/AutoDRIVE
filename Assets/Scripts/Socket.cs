@@ -34,13 +34,11 @@ public class Socket : MonoBehaviour
     public GPS[] PositioningSystems; // `IPS` references
     public IMU[] InertialMeasurementUnits; // `IMU` references
     public LIDAR[] LIDARUnits; // `LIDAR` references
+    public bool IntensityArray = true; // Choose to publish 2D LIDAR Intensity Array
     public LIDAR3D[] LIDAR3DUnits; // `LIDAR3D` references
-    private string LIDARRangeArray;
-    private string LIDARIntensityArray;
     public Camera[] FrontCameras; // Vehicle front camera references
     public Camera[] RearCameras; // Vehicle rear camera references
     public bool SideCameras = false; // Rename front/rear camera frames as left/right
-    private float VehicleSpeed = 0.0f; // Vehicle speed
     public LapTimer[] LapTimers; // Lap timer references
 
     public TLController[] TrafficLightControllers; // Traffic light controller references
@@ -292,14 +290,9 @@ public class Socket : MonoBehaviour
                         data["V"+(i+1).ToString()+" LIDAR Scan Rate"] = LIDARUnits[i].CurrentScanRate.ToString("F4"); // Get LIDAR scan rate
                         if(LIDARUnits[i].CurrentRangeArray[LIDARUnits[i].CurrentRangeArray.Length-1] != null)
                         {
-                            LIDARRangeArray = string.Join(" ", LIDARUnits[i].CurrentRangeArray);
-                            LIDARIntensityArray = string.Join(" ", LIDARUnits[i].CurrentIntensityArray);
+                            data["V" + (i + 1).ToString() + " LIDAR Range Array"] = DataCompressor.CompressArray(LIDARUnits[i].CurrentRangeArray); // Get LIDAR range array
+                            if (IntensityArray) data["V" + (i + 1).ToString() + " LIDAR Intensity Array"] = DataCompressor.CompressArray(LIDARUnits[i].CurrentIntensityArray); // Get LIDAR intensity array
                         }
-                        data["V"+(i+1).ToString()+" LIDAR Range Array"] = LIDARRangeArray; // Get LIDAR range array
-                        data["V"+(i+1).ToString()+" LIDAR Intensity Array"] = LIDARIntensityArray; // Get LIDAR intensity array
-
-                        LIDARRangeArray = ""; // Reset LIDAR range array for next measurement
-                        LIDARIntensityArray = ""; // Reset LIDAR intensity array for next measurement
                     }
                     if(LIDAR3DUnits.Length != 0) data["V"+(i+1).ToString()+" LIDAR Pointcloud"] = Convert.ToBase64String(LIDAR3DUnits[i].CurrentPointcloud); // Get LIDAR pointcloud
                     if(FrontCameras.Length != 0)
@@ -322,7 +315,7 @@ public class Socket : MonoBehaviour
                     data["V"+(i+1).ToString()+" Lap Time"] = LapTimers[i].LapTime.ToString("F4"); // Get lap time
                     data["V"+(i+1).ToString()+" Last Lap Time"] = LapTimers[i].LastLapTime.ToString("F4"); // Get last lap count
                     data["V"+(i+1).ToString()+" Best Lap Time"] = LapTimers[i].BestLapTime.ToString("F4"); // Get best lap time
-                    data["V"+(i+1).ToString() + " Collisions"] = LapTimers[i].CollisionCount.ToString(); // Get collision count
+                    data["V"+(i+1).ToString()+" Collisions"] = LapTimers[i].CollisionCount.ToString(); // Get collision count
                 }
             }
             socket.Emit("Bridge", new JSONObject(data)); // Write data to server

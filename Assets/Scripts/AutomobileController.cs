@@ -113,25 +113,25 @@ public class AutomobileController : MonoBehaviour
     public float CurrentThrottle
     {
         get { return currentT; }
-        set { AutonomousThrottle = value; }
+        set { AutonomousThrottle = Mathf.Clamp(value, -1.0f, 1.0f); }
     }
 
     public float CurrentSteeringAngle
     {
         get { return currentS; }
-        set { AutonomousSteering = value; }
+        set { AutonomousSteering = Mathf.Clamp(value, -1.0f, 1.0f); }
     }
 
 	public float CurrentBrake
     {
         get { return currentB; }
-        set { AutonomousBrake = value; }
+        set { AutonomousBrake = Mathf.Clamp(value, 0.0f, 1.0f); }
     }
 
     public float CurrentHandbrake
     {
         get { return currentH; }
-        set { AutonomousHandbrake = value; }
+        set { AutonomousHandbrake = Mathf.Clamp(value, 0.0f, 1.0f); }
     }
 
 	void OnCollisionEnter(Collision collision)

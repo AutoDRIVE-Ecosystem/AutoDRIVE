@@ -19,31 +19,19 @@ public class DrivingMode : MonoBehaviour
     {
         for(int i=0; i<VehicleControllers.Length; i++)
         {
-            VehicleControllers[i].DrivingMode = 0;
+            VehicleControllers[i].DrivingMode = 1;
         }
         for(int i=0; i<AutomobileControllers.Length; i++)
         {
-            AutomobileControllers[i].DrivingMode = 0;
+            AutomobileControllers[i].DrivingMode = 1;
         }
-        Label.text = "Manual";
+        Label.text = "Autonomous";
     }
 
     public void ToggleDrivingMode()
     {
         Mode = !Mode;
         if(Mode)
-        {
-            for(int i=0; i<VehicleControllers.Length; i++)
-            {
-                VehicleControllers[i].DrivingMode = 1;
-            }
-            for(int i=0; i<AutomobileControllers.Length; i++)
-            {
-                AutomobileControllers[i].DrivingMode = 1;
-            }
-            Label.text = "Autonomous";
-        }
-        else
         {
             for(int i=0; i<VehicleControllers.Length; i++)
             {
@@ -54,6 +42,18 @@ public class DrivingMode : MonoBehaviour
                 AutomobileControllers[i].DrivingMode = 0;
             }
             Label.text = "Manual";
+        }
+        else
+        {
+            for(int i=0; i<VehicleControllers.Length; i++)
+            {
+                VehicleControllers[i].DrivingMode = 1;
+            }
+            for(int i=0; i<AutomobileControllers.Length; i++)
+            {
+                AutomobileControllers[i].DrivingMode = 1;
+            }
+            Label.text = "Autonomous";
         }
     }
 }

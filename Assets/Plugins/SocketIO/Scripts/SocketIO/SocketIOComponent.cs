@@ -107,15 +107,9 @@ namespace SocketIO
 
 		public void OnEnable()
 		{
-			if(IP.text != "")
-			{
-					IPAddress = IP.text;
-			}
+			if(IP.text != "") IPAddress = IP.text;
 
-			if(Port.text != "")
-			{
-					PortNumber = Port.text;
-			}
+			if(Port.text != "") PortNumber = Port.text;
 
 			string url = "ws://" + IPAddress + ":" + PortNumber + "/socket.io/?EIO=4&transport=websocket";
 
@@ -143,10 +137,10 @@ namespace SocketIO
 
 		public void OnDisable()
 		{
-				Close();
-		}
+			Close();
+        }
 
-		public void Update()
+		public void FixedUpdate()
 		{
 			lock(eventQueueLock){
 				while(eventQueue.Count > 0){

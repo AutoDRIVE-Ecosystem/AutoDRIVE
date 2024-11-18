@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Dead_Grass
   m_EditorClassIdentifier: 
   profile:
-    scatteringDistance: {r: 4, g: 4, b: 4, a: 1}
+    scatteringDistance: {r: 0.7490196, g: 0.7490196, b: 0.7490196, a: 1}
+    scatteringDistanceMultiplier: 5.340314
     transmissionTint: {r: 5.3879776, g: 4.7740803, b: 4.142643, a: 1}
     texturingMode: 0
     transmissionMode: 1
@@ -21,4 +22,4 @@ MonoBehaviour:
     worldScale: 1
     ior: 1
     hash: 1080463398
-  m_Version: 1
+  m_Version: 2

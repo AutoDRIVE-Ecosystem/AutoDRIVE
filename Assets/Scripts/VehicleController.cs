@@ -52,7 +52,6 @@ public class VehicleController : MonoBehaviour
     private bool MouseHold;
 	private float MouseStart;
 
-    private float currentSteeringAngle = 0;
     private float lastSteeringAngle = 0;
     private float angularInput = 0;
     private float linearInput = 0;
@@ -68,13 +67,13 @@ public class VehicleController : MonoBehaviour
     public float CurrentThrottle
     {
         get { return currentT; }
-        set { AutonomousThrottle = value; }
+        set { AutonomousThrottle = Mathf.Clamp(value, -1.0f, 1.0f); }
     }
 
     public float CurrentSteeringAngle
     {
         get { return currentS; }
-        set { AutonomousSteering = value; }
+        set { AutonomousSteering = Mathf.Clamp(value, -1.0f, 1.0f); }
     }
 
     void Start()
@@ -133,7 +132,6 @@ public class VehicleController : MonoBehaviour
             }
             lastSteeringAngle = SteeringAngle; // Update previous steering angle
         }
-        // currentSteeringAngle = Mathf.LerpAngle(lastSteeringAngle, SteeringAngle, SteeringRate*Time.deltaTime);
         //Debug.Log("Steering Angle: " + SteeringAngle);
         //Debug.Log("Left Wheel Angle: " + Mathf.Rad2Deg*(Mathf.Atan((2*Wheelbase*Mathf.Tan(Mathf.Deg2Rad*(SteeringAngle)))/((2*Wheelbase)+(TrackWidth*Mathf.Tan(Mathf.Deg2Rad*(SteeringAngle)))))));
         //Debug.Log("Right Wheel Angle: " + Mathf.Rad2Deg*(Mathf.Atan((2*Wheelbase*Mathf.Tan(Mathf.Deg2Rad*(SteeringAngle)))/((2*Wheelbase)-(TrackWidth*Mathf.Tan(Mathf.Deg2Rad*(SteeringAngle)))))));

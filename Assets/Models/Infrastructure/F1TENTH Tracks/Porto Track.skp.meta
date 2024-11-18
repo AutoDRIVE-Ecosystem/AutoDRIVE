@@ -8,12 +8,12 @@ SketchUpImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Inner Face
-    second: {fileID: 2100000, guid: db8be9161fd772941a8099d546b13317, type: 2}
+    second: {fileID: 2100000, guid: 5a548f66e3782d94bbadd167376c2f60, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Outer Face
-    second: {fileID: 2100000, guid: 963b630eb0d0ef54cad3234dce54e84d, type: 2}
+    second: {fileID: 2100000, guid: 4101217bf0bfb8e40bc1a088293dc3dc, type: 2}
   materials:
     materialImportMode: 2
     materialName: 2
@@ -119,5 +119,5 @@ SketchUpImporter:
   selectedNodes: 0000000001000000
   assetHash:
     serializedVersion: 2
-    Hash: 6828344c8fdbcbe1253bdb6b9bf98d67
+    Hash: e0ae87a8e6e55b610dc498147ccff623
   fileUnit: 0

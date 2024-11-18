@@ -51,7 +51,7 @@ public class WeatherManager : MonoBehaviour
             {
                 clouds.enable.overrideState = true; // Enable clouds override
                 clouds.enable.value = true; // Enable clouds
-                clouds.cloudPreset.value = VolumetricClouds.CloudPresets.Custom; // Set clouds preset
+                clouds.cloudPreset = VolumetricClouds.CloudPresets.Custom; // Set clouds preset
                 clouds.densityMultiplier.value = CloudIntensity; // Set clouds density
             }
             if(FogIntensity==0) // Disable fog
@@ -135,7 +135,7 @@ public class WeatherManager : MonoBehaviour
         {
             clouds.enable.overrideState = true; // Enable clouds override
             clouds.enable.value = true; // Enable clouds
-            clouds.cloudPreset.value = VolumetricClouds.CloudPresets.Cloudy; // Set clouds preset
+            clouds.cloudPreset = VolumetricClouds.CloudPresets.Cloudy; // Set clouds preset
             fog.enabled.overrideState = true; // Enable fog override
             fog.enabled.value = false; // Disable fog
             Rain.SetActive(false); // Disable rain particle precipitation
@@ -145,7 +145,7 @@ public class WeatherManager : MonoBehaviour
         {
             clouds.enable.overrideState = true; // Enable clouds override
             clouds.enable.value = true; // Enable clouds
-            clouds.cloudPreset.value = VolumetricClouds.CloudPresets.Sparse; // Set clouds preset
+            clouds.cloudPreset = VolumetricClouds.CloudPresets.Sparse; // Set clouds preset
             fog.enabled.overrideState = true; // Enable fog override
             fog.enabled.value = true; // Enable fog
             fog.meanFreePath.value = 150; // Set fog density (actual density is inverse of this value)
@@ -158,7 +158,7 @@ public class WeatherManager : MonoBehaviour
         {
             clouds.enable.overrideState = true; // Enable clouds override
             clouds.enable.value = true; // Enable clouds
-            clouds.cloudPreset.value = VolumetricClouds.CloudPresets.Sparse; // Set clouds preset
+            clouds.cloudPreset = VolumetricClouds.CloudPresets.Sparse; // Set clouds preset
             fog.enabled.overrideState = true; // Enable fog override
             fog.enabled.value = true; // Enable fog
             fog.meanFreePath.value = 50; // Set fog density (actual density is inverse of this value)
@@ -187,7 +187,7 @@ public class WeatherManager : MonoBehaviour
             }
             clouds.enable.overrideState = true; // Enable clouds override
             clouds.enable.value = true; // Enable clouds
-            clouds.cloudPreset.value = VolumetricClouds.CloudPresets.Overcast; // Set clouds preset
+            clouds.cloudPreset = VolumetricClouds.CloudPresets.Overcast; // Set clouds preset
             fog.enabled.overrideState = true; // Enable fog override
             fog.enabled.value = true; // Enable fog
             fog.meanFreePath.value = 200; // Set fog density (actual density is inverse of this value)
@@ -223,7 +223,7 @@ public class WeatherManager : MonoBehaviour
             }
             clouds.enable.overrideState = true; // Enable clouds override
             clouds.enable.value = true; // Enable clouds
-            clouds.cloudPreset.value = VolumetricClouds.CloudPresets.Stormy; // Set clouds preset
+            clouds.cloudPreset = VolumetricClouds.CloudPresets.Stormy; // Set clouds preset
             fog.enabled.overrideState = true; // Enable fog override
             fog.enabled.value = true; // Enable fog
             fog.meanFreePath.value = 100; // Set fog density (actual density is inverse of this value)
@@ -253,7 +253,7 @@ public class WeatherManager : MonoBehaviour
             }
             clouds.enable.overrideState = true; // Enable clouds override
             clouds.enable.value = true; // Enable clouds
-            clouds.cloudPreset.value = VolumetricClouds.CloudPresets.Overcast; // Set clouds preset
+            clouds.cloudPreset = VolumetricClouds.CloudPresets.Overcast; // Set clouds preset
             fog.enabled.overrideState = true; // Enable fog override
             fog.enabled.value = true; // Enable fog
             fog.meanFreePath.value = 200; // Set fog density (actual density is inverse of this value)
@@ -281,7 +281,7 @@ public class WeatherManager : MonoBehaviour
             }
             clouds.enable.overrideState = true; // Enable clouds override
             clouds.enable.value = true; // Enable clouds
-            clouds.cloudPreset.value = VolumetricClouds.CloudPresets.Stormy; // Set clouds preset
+            clouds.cloudPreset = VolumetricClouds.CloudPresets.Stormy; // Set clouds preset
             fog.enabled.overrideState = true; // Enable fog override
             fog.enabled.value = true; // Enable fog
             fog.meanFreePath.value = 100; // Set fog density (actual density is inverse of this value)
