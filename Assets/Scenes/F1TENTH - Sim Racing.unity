@@ -6926,6 +6926,8 @@ MonoBehaviour:
   TimeOfDayAPI: 0
   TimeOfDay: []
   CoSimManagers: []
+  ResetManagers:
+  - {fileID: 3444321734682654869}
   VehicleRigidBodies:
   - {fileID: 1284891604}
   VehicleControllers:
@@ -9147,8 +9149,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CoSimTimer: 0
   CoSimSmoothness: 1
-  CoSimPosition: {x: 0, y: 0, z: 0}
-  CoSimRotation: {x: 0, y: 0, z: 0, w: 0}
+  CoSimPosition: {x: -3, y: 0.01, z: 0.74}
+  CoSimRotation: {x: 0, y: 0.70710677, z: 0, w: 0.70710677}
 --- !u!1 &1291692184
 GameObject:
   m_ObjectHideFlags: 0
@@ -15317,6 +15319,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1464703053}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!4 &3444321734682654866
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3444321734682654868}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3444321734682654868
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3444321734682654866}
+  - component: {fileID: 3444321734682654869}
+  m_Layer: 0
+  m_Name: Reset Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &3444321734682654869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3444321734682654868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19474bcd8ef1d4f40a37324671a174ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ResetFlag: 0
+  Vehicles:
+  - {fileID: 1284891605}
+  VehicleRigidBodies:
+  - {fileID: 1284891604}
+  CoSimManagers:
+  - {fileID: 1284891609}
+  LeftWheelEncoders:
+  - {fileID: 1735463099}
+  RightWheelEncoders:
+  - {fileID: 534535144}
+  LapTimers:
+  - {fileID: 1284891608}
 --- !u!4 &3857243730762506040
 Transform:
   m_ObjectHideFlags: 0
@@ -16770,3 +16829,4 @@ SceneRoots:
   - {fileID: 971678323}
   - {fileID: 1182657549}
   - {fileID: 5676153707416114639}
+  - {fileID: 3444321734682654866}

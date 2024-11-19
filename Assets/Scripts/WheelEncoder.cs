@@ -16,7 +16,7 @@ public class WheelEncoder : MonoBehaviour
     public int GearRatio;
 
     private float RPS = 0f;
-    private float TotalRevolutions = 0f;
+    public float TotalRevolutions = 0f;
     private int TotalTicks = 0;
     private int PrevTotalTicks = 0;
     private float TotalAngle = 0;

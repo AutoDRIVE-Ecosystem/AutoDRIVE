@@ -22,7 +22,8 @@ public class Socket : MonoBehaviour
     public bool TimeOfDayAPI = false;
     public TimeOfDay[] TimeOfDay; // `TimeOfDay` reference
 
-    public CoSimManager[] CoSimManagers; // Vehicle gameobjects
+    public CoSimManager[] CoSimManagers; // `CoSimManager` references
+    public ResetManager[] ResetManagers; // `ResetManager` references
     public Rigidbody[] VehicleRigidBodies; // Vehicle rigid bodies
     public VehicleController[] VehicleControllers; // `VehicleController` references
     public AutomobileController[] AutomobileControllers; // `AutomobileController` references
@@ -126,7 +127,11 @@ public class Socket : MonoBehaviour
             {
                 if(VehicleControllers[i].CurrentDrivingMode == 1)
                 {
-                    if(CoSimManagers.Length != 0)
+                    if (ResetManagers.Length != 0)
+                    {
+                        ResetManagers[i].ResetFlag = bool.Parse(jsonObject.GetField("Reset").str); // Set reset flag
+                    }
+                    if (CoSimManagers.Length != 0)
                     {
                         if(int.Parse(jsonObject.GetField("V"+(i+1).ToString()+" CoSim").str) == 1)
                         {
@@ -175,7 +180,11 @@ public class Socket : MonoBehaviour
             {
                 if(AutomobileControllers[i].CurrentDrivingMode == 1)
                 {
-                    if(CoSimManagers.Length != 0)
+                    if (ResetManagers.Length != 0)
+                    {
+                        ResetManagers[i].ResetFlag = bool.Parse(jsonObject.GetField("Reset").str); // Set reset flag
+                    }
+                    if (CoSimManagers.Length != 0)
                     {
                         if(int.Parse(jsonObject.GetField("V"+(i+1).ToString()+" CoSim").str) == 1)
                         {

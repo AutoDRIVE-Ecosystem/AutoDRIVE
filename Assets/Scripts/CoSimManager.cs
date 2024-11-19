@@ -24,7 +24,7 @@ public class CoSimManager : MonoBehaviour
     void Update()
     {
         transform.position = Vector3.Slerp(transform.position, CoSimPosition, CoSimTimer/CoSimSmoothness);
-        transform.rotation = Quaternion.Slerp (transform.rotation, CoSimRotation, CoSimTimer/CoSimSmoothness);
+        transform.rotation = Quaternion.Slerp(transform.rotation, CoSimRotation, CoSimTimer/CoSimSmoothness);
         CoSimTimer += Time.deltaTime;
         if(CoSimTimer >= CoSimSmoothness) CoSimTimer = CoSimSmoothness;
     }

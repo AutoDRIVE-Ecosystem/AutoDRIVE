@@ -12,15 +12,15 @@ public class LapTimer : MonoBehaviour
 
     public string RacetrackName; // Exact name of the racetrack gameobject
     public Transform[] Checkpoints; // Array of transforms of all checkpoints
-    public int currentCheckpoint = 0;
-    public int previousCheckpoint = 0;
-    public float CollisionCount = 0f; // Collision count
+    public int CurrentCheckpoint = 0;
+    public int PreviousCheckpoint = 0;
+    public int CollisionCount = 0; // Collision count
     public int CheckpointCount = 0; // Checkpoint count
 
     public int LapCount = 0; // Measure lap count
     public float LapTime = 0; // Measure lap time
-    public float LastLapTime = 1e+6f; // Holds last lap time
-    public float BestLapTime = 1e+6f; // Holds best lap time
+    public float LastLapTime = Mathf.Infinity; // Holds last lap time
+    public float BestLapTime = Mathf.Infinity; // Holds best lap time
 
     private Rigidbody VehicleRigidbody; // Vehicle rigid body component
     private Transform SavedCheckpoint; // Transform of latest saved checkpoint
@@ -40,17 +40,8 @@ public class LapTimer : MonoBehaviour
         {
             // Update only on positive edge of trigger
             LapCount += 1;
-            if (LapCount < 10) txtLapCount.text = "0" + LapCount.ToString();
-            else txtLapCount.text = LapCount.ToString();
             LastLapTime = LapTime;
-            if (LapTime < 10) txtLastLap.text = "0" + LapTime.ToString("f1");
-            else txtLastLap.text = LapTime.ToString("f1");
-            if (LapTime < BestLapTime)
-            {
-                BestLapTime = LapTime;
-                if (BestLapTime < 10) txtBestLap.text = "0" + BestLapTime.ToString("f1");
-                else txtBestLap.text = BestLapTime.ToString("f1");
-            }
+            if (LapTime < BestLapTime) BestLapTime = LapTime;
             LapTime = 0;
             FinishLineFlag = true;
             CheckpointCount = 0;
@@ -58,8 +49,8 @@ public class LapTimer : MonoBehaviour
         else if (collider.tag == "Checkpoint" && !CheckpointFlag)
         {
             CheckpointFlag = true;
-            currentCheckpoint = int.Parse(collider.name);
-            if (currentCheckpoint == previousCheckpoint+1) CheckpointCount = currentCheckpoint;
+            CurrentCheckpoint = int.Parse(collider.name);
+            if (CurrentCheckpoint == PreviousCheckpoint+1) CheckpointCount = CurrentCheckpoint;
         }
     }
 
@@ -67,7 +58,7 @@ public class LapTimer : MonoBehaviour
     {
         FinishLineFlag = false;
         CheckpointFlag = false;
-        previousCheckpoint = currentCheckpoint;
+        PreviousCheckpoint = CurrentCheckpoint;
     }
 
     void Respawn()
@@ -84,7 +75,7 @@ public class LapTimer : MonoBehaviour
         gameObject.transform.rotation = SavedCheckpoint.rotation;
 
         // Update clooision flag and count
-        CollisionCount = CollisionCount + 1f; // Update collision count
+        CollisionCount = CollisionCount + 1; // Update collision count
     }
 
     public void Start()
@@ -94,9 +85,20 @@ public class LapTimer : MonoBehaviour
 
     private void Update()
     {
-        // Update lap time on GUI
+        // Update current lap time on GUI
         if (LapTime < 10) txtLapTime.text = "0" + LapTime.ToString("f1");
         else txtLapTime.text = LapTime.ToString("f1");
+        // Update lap count on GUI
+        if (LapCount < 10) txtLapCount.text = "0" + LapCount.ToString();
+        else txtLapCount.text = LapCount.ToString();
+        // Update last lap time on GUI
+        if (LastLapTime == Mathf.Infinity) txtLastLap.text = "--";
+        else if (LastLapTime < 10) txtLastLap.text = "0" + LastLapTime.ToString("f1");
+        else txtLastLap.text = LastLapTime.ToString("f1");
+        // Update best lap time on GUI
+        if (BestLapTime == Mathf.Infinity) txtBestLap.text = "--";
+        else if (BestLapTime < 10) txtBestLap.text = "0" + BestLapTime.ToString("f1");
+        else txtBestLap.text = BestLapTime.ToString("f1");
     }
 
     public void FixedUpdate()
