@@ -132,7 +132,7 @@ We encourage you to read and cite the relevant papers if you use any part of thi
 ```bibtex
 @article{AutoDRIVE-Ecosystem-2023,
 author = {Samak, Tanmay and Samak, Chinmay and Kandhasamy, Sivanathan and Krovi, Venkat and Xie, Ming},
-title = {AutoDRIVE: A Comprehensive, Flexible and Integrated Digital Twin Ecosystem for Autonomous Driving Research &amp; Education},
+title = {AutoDRIVE: A Comprehensive, Flexible and Integrated Digital Twin Ecosystem for Autonomous Driving Research and Education},
 journal = {Robotics},
 volume = {12},
 year = {2023},
