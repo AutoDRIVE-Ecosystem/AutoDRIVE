@@ -272,7 +272,7 @@ primaryClass = {cs.RO},
 url = {https://arxiv.org/abs/2406.05465}
 }
 ```
-This work has been accepted at **2024 IEEE/ASME International Conference on Advanced Intelligent Mechatronics (AIM).**
+This work has been accepted at **2024 IEEE Conference on Telepresence (TELE).**
 
 #### [A Scalable and Parallelizable Digital Twin Framework for Sustainable Sim2Real Transition of Multi-Agent Reinforcement Learning Systems](https://arxiv.org/abs/2403.10996)
 ```bibtex
