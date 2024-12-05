@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33b71fae31e6c7d438e8566dc713e666, type: 3}
+  m_Name: cuicar-monument
+  m_EditorClassIdentifier: 
+  m_FormatVersion: 20231020
+  m_SplatCount: 1409619
+  m_BoundsMin: {x: -24.904995, y: -15.085309, z: -18.123123}
+  m_BoundsMax: {x: 27.02324, y: 37.865047, z: 25.09475}
+  m_DataHash:
+    serializedVersion: 2
+    Hash: 8f78da895d529de3a90be509471be87f
+  m_PosFormat: 2
+  m_ScaleFormat: 2
+  m_SHFormat: 3
+  m_ColorFormat: 2
+  m_PosData: {fileID: 4900000, guid: 1c754ee951f388e40a799375c3e63bdd, type: 3}
+  m_ColorData: {fileID: 4900000, guid: 0d881cafbe6d6574189c374fa5e75087, type: 3}
+  m_OtherData: {fileID: 4900000, guid: 8b8564fae69b2474baa414d93f1f914f, type: 3}
+  m_SHData: {fileID: 4900000, guid: 8e8760a95551e7348b6424431c2c3036, type: 3}
+  m_ChunkData: {fileID: 4900000, guid: d2a563dd9164f524e9fe6a06aeb83277, type: 3}
+  m_Cameras: []

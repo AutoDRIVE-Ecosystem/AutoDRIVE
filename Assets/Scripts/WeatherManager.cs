@@ -13,6 +13,10 @@ public class WeatherManager : MonoBehaviour
     */
 
     public VolumeProfile VolumeProfile; // HDRP volume profile
+    public float FogLevel1 = 200f; // Used for light rain/snow
+    public float FogLevel2 = 150f; // Used for light fog
+    public float FogLevel3 = 100f; // Used for heavy rain/snow
+    public float FogLevel4 = 50f; // Used for heavy fog
     public GameObject Rain; // Rain gameobject
     public GameObject SubRain; // Sub-rain gameobject
     public ParticleSystem RainParticles; // Rain particle system
@@ -63,7 +67,7 @@ public class WeatherManager : MonoBehaviour
             {
                 fog.enabled.overrideState = true; // Enable fog override
                 fog.enabled.value = true; // Enable fog
-                fog.meanFreePath.value = 50+(1-FogIntensity)*200; // Set fog density (actual density is inverse of this value)
+                fog.meanFreePath.value = 50+(1-FogIntensity)* FogLevel1; // Set fog density (actual density is inverse of this value)
                 fog.baseHeight.value = EgoVehicle.position.y; // Set fog base height
                 fog.maximumHeight.value = EgoVehicle.position.y + 50; // Set fog maximum height
             }
@@ -148,7 +152,7 @@ public class WeatherManager : MonoBehaviour
             clouds.cloudPreset = VolumetricClouds.CloudPresets.Sparse; // Set clouds preset
             fog.enabled.overrideState = true; // Enable fog override
             fog.enabled.value = true; // Enable fog
-            fog.meanFreePath.value = 150; // Set fog density (actual density is inverse of this value)
+            fog.meanFreePath.value = FogLevel2; // Set fog density (actual density is inverse of this value)
             fog.baseHeight.value = EgoVehicle.position.y; // Set fog base height
             fog.maximumHeight.value = EgoVehicle.position.y + 50; // Set fog maximum height
             Rain.SetActive(false); // Disable rain particle precipitation
@@ -161,7 +165,7 @@ public class WeatherManager : MonoBehaviour
             clouds.cloudPreset = VolumetricClouds.CloudPresets.Sparse; // Set clouds preset
             fog.enabled.overrideState = true; // Enable fog override
             fog.enabled.value = true; // Enable fog
-            fog.meanFreePath.value = 50; // Set fog density (actual density is inverse of this value)
+            fog.meanFreePath.value = FogLevel4; // Set fog density (actual density is inverse of this value)
             fog.baseHeight.value = EgoVehicle.position.y; // Set fog base height
             fog.maximumHeight.value = EgoVehicle.position.y + 50; // Set fog maximum height
             Rain.SetActive(false); // Disable rain particle precipitation
@@ -190,7 +194,7 @@ public class WeatherManager : MonoBehaviour
             clouds.cloudPreset = VolumetricClouds.CloudPresets.Overcast; // Set clouds preset
             fog.enabled.overrideState = true; // Enable fog override
             fog.enabled.value = true; // Enable fog
-            fog.meanFreePath.value = 200; // Set fog density (actual density is inverse of this value)
+            fog.meanFreePath.value = FogLevel1; // Set fog density (actual density is inverse of this value)
             fog.baseHeight.value = EgoVehicle.position.y; // Set fog base height
             fog.maximumHeight.value = EgoVehicle.position.y + 50; // Set fog maximum height
             Rain.SetActive(true); // Enable rain particle precipitation
@@ -226,7 +230,7 @@ public class WeatherManager : MonoBehaviour
             clouds.cloudPreset = VolumetricClouds.CloudPresets.Stormy; // Set clouds preset
             fog.enabled.overrideState = true; // Enable fog override
             fog.enabled.value = true; // Enable fog
-            fog.meanFreePath.value = 100; // Set fog density (actual density is inverse of this value)
+            fog.meanFreePath.value = FogLevel3; // Set fog density (actual density is inverse of this value)
             fog.baseHeight.value = EgoVehicle.position.y; // Set fog base height
             fog.maximumHeight.value = EgoVehicle.position.y + 50; // Set fog maximum height
             Rain.SetActive(true); // Enable rain particle precipitation
@@ -256,7 +260,7 @@ public class WeatherManager : MonoBehaviour
             clouds.cloudPreset = VolumetricClouds.CloudPresets.Overcast; // Set clouds preset
             fog.enabled.overrideState = true; // Enable fog override
             fog.enabled.value = true; // Enable fog
-            fog.meanFreePath.value = 200; // Set fog density (actual density is inverse of this value)
+            fog.meanFreePath.value = FogLevel1; // Set fog density (actual density is inverse of this value)
             fog.baseHeight.value = EgoVehicle.position.y; // Set fog base height
             fog.maximumHeight.value = EgoVehicle.position.y + 50; // Set fog maximum height
             Rain.SetActive(false); // Disable rain particle precipitation
@@ -284,7 +288,7 @@ public class WeatherManager : MonoBehaviour
             clouds.cloudPreset = VolumetricClouds.CloudPresets.Stormy; // Set clouds preset
             fog.enabled.overrideState = true; // Enable fog override
             fog.enabled.value = true; // Enable fog
-            fog.meanFreePath.value = 100; // Set fog density (actual density is inverse of this value)
+            fog.meanFreePath.value = FogLevel3; // Set fog density (actual density is inverse of this value)
             fog.baseHeight.value = EgoVehicle.position.y; // Set fog base height
             fog.maximumHeight.value = EgoVehicle.position.y + 50; // Set fog maximum height
             Rain.SetActive(false); // Disable rain particle precipitation

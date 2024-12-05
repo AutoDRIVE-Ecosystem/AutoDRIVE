@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33b71fae31e6c7d438e8566dc713e666, type: 3}
+  m_Name: traffic-cone
+  m_EditorClassIdentifier: 
+  m_FormatVersion: 20231020
+  m_SplatCount: 9066
+  m_BoundsMin: {x: -0.24027742, y: 0.007472531, z: -0.70348424}
+  m_BoundsMax: {x: 0.077387966, y: 0.3198565, z: -0.13736391}
+  m_DataHash:
+    serializedVersion: 2
+    Hash: 9b4a98e15e69eb13b2c214d653a65107
+  m_PosFormat: 2
+  m_ScaleFormat: 2
+  m_SHFormat: 3
+  m_ColorFormat: 2
+  m_PosData: {fileID: 4900000, guid: 9267c815456d1fb49a8aae605ad0dc72, type: 3}
+  m_ColorData: {fileID: 4900000, guid: 9d8e113edcac93d45887cfc67ba553e0, type: 3}
+  m_OtherData: {fileID: 4900000, guid: 9853a325c4ebbe246b4a6ea0d1d12b52, type: 3}
+  m_SHData: {fileID: 4900000, guid: 6c304f60287538c4ca8220dd25c4e65e, type: 3}
+  m_ChunkData: {fileID: 4900000, guid: a862d94344bfdf0499a00baf799f9a96, type: 3}
+  m_Cameras: []
