@@ -1,6 +1,4 @@
-﻿
-
-using System;
+﻿/*using System;
 using System.Diagnostics;
 
 using UnityEditor;
@@ -187,4 +185,4 @@ public class PublisherWelcomeScreen:EditorWindow
 
 		EditorPrefs.SetBool(isShowAtStartEditorPrefs, false);
 	}
-}
+}*/

@@ -1,0 +1,64 @@
+{
+  "name": "ai.undream.llm",
+  "version": "2.3.0",
+  "displayName": "LLM for Unity",
+  "description": "LLM for Unity allows to run and distribute Large Language Models (LLMs) in the Unity engine.",
+  "unity": "2022.3",
+  "unityRelease": "16f1",
+  "documentationUrl": "https://undream.ai/LLMUnity",
+  "testables": [
+    "undream.llmunity.Runtime.Tests"
+  ],
+  "keywords": [
+    "llm",
+    "large language model",
+    "Llama",
+    "GPT",
+    "ChatGPT",
+    "artificial intelligence",
+    "AI",
+    "NPC",
+    "conversation",
+    "dialogue",
+    "chat",
+    "chatbot",
+    "generative"
+   ],
+   "samples": [
+    {
+      "displayName": "SimpleInteraction",
+      "description": "Simple interaction with an AI character",
+      "path": "Samples~/SimpleInteraction"
+    },
+    {
+      "displayName": "MultipleCharacters",
+      "description": "Simple interaction using multiple AI characters",
+      "path": "Samples~/MultipleCharacters"
+    },
+    {
+      "displayName": "KnowledgeBaseGame",
+      "description": "Simple detective game using a knowledge base to provide information to the LLM.",
+      "path": "Samples~/KnowledgeBaseGame"
+    },
+    {
+      "displayName": "ChatBot",
+      "description": "Interaction between a player and a AI with a UI similar to a messaging app",
+      "path": "Samples~/ChatBot"
+    },
+    {
+      "displayName": "AndroidDemo",
+      "description": "Example Android app with an initial screen with model download progress",
+      "path": "Samples~/AndroidDemo"
+    },
+    {
+      "displayName": "RAG",
+      "description": "Semantic search using a Retrieval Augmented Generation (RAG) system. Includes example using a RAG to feed information to a LLM.",
+      "path": "Samples~/RAG"
+    }
+   ],
+   "author": {
+    "name": "Undream AI",
+    "email": "hello@undream.ai",
+    "url": "https://undream.ai"
+  }
+}

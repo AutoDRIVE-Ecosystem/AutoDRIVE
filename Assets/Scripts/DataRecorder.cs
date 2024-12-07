@@ -15,6 +15,7 @@ public class DataRecorder : MonoBehaviour
 
     public GameObject eventSystem; // Default event system
 
+    public bool HotKey = true; // Enable hot-key "R"
     public float RecordRate = 10.0f; // Data recording rate (Hz)
     public Text RecordStatus; // Data recording status
     private string saveLocation = ""; // Data saving location
@@ -188,7 +189,7 @@ public class DataRecorder : MonoBehaviour
     }
 
     void Update () {
-        if (Input.GetKeyDown(KeyCode.R)) ToggleRecording(); // Toggle data recording using `R` key
+        if (HotKey && Input.GetKeyDown(KeyCode.R)) ToggleRecording(); // Toggle data recording using `R` key
         if (getSaveStatus()) {
             RecordStatus.text = "Saving Data: " + (int)(100*getSavePercent()) + "%";
         }

@@ -14832,6 +14832,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eventSystem: {fileID: 2105245628}
+  HotKey: 1
   RecordRate: 30
   RecordStatus: {fileID: 1933895406}
   VehicleDataFileNames: []
@@ -17736,8 +17737,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83f3c5ca04def7c4facc14c32dffec93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IPAddress: {fileID: 104152745}
-  PortNumber: {fileID: 1304714006}
+  ListOfGameObjects:
+  - {fileID: 104152745}
+  - {fileID: 1304714006}
 --- !u!114 &2105245630
 MonoBehaviour:
   m_ObjectHideFlags: 0

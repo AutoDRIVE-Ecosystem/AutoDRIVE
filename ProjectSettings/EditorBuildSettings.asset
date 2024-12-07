@@ -108,7 +108,7 @@ EditorBuildSettings:
     path: Assets/Scenes/VSR - Multi-Camera Data Recording.unity
     guid: 9b44e16b9e7797b4abdfa1971b0b529e
   - enabled: 0
-    path: Assets/Scenes/Hunter SE - Data Collection - Copy.unity
+    path: Assets/Scenes/Hunter SE - LIDAR Test.unity
     guid: ff1afea9eb61e7e4b98bf855975bec3b
   - enabled: 0
     path: Assets/Scenes/RZR - Dirt Road.unity

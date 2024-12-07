@@ -71,6 +71,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: 3d0465da28334da439cc37c5a3ac88fe, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_489eb875f94145638707926756960d2c_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 3d0465da28334da439cc37c5a3ac88fe, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_58efab3a72ce490984457d9a1288b610_Texture_1:
         m_Texture: {fileID: 2800000, guid: c0b8d62cf93b06342a8e23d31a75367e, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -119,6 +123,7 @@ Material:
     - _DstBlend: 10
     - _EnableBlendModePreserveSpecularLighting: 0
     - _EnableFogOnTransparent: 1
+    - _ExcludeFromTUAndAA: 0
     - _NormalStrength: 0.01
     - _OpaqueCullMode: 2
     - _RayTracing: 0
@@ -140,10 +145,10 @@ Material:
     - _StencilRefGBuffer: 10
     - _StencilRefMV: 40
     - _StencilWriteMask: 6
-    - _StencilWriteMaskDepth: 8
+    - _StencilWriteMaskDepth: 9
     - _StencilWriteMaskDistortionVec: 4
-    - _StencilWriteMaskGBuffer: 14
-    - _StencilWriteMaskMV: 40
+    - _StencilWriteMaskGBuffer: 15
+    - _StencilWriteMaskMV: 41
     - _SupportDecals: 0
     - _SurfaceType: 1
     - _TransparentBackfaceEnable: 0

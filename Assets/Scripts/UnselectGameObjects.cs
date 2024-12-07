@@ -22,16 +22,44 @@ public class UnselectGameObjects : MonoBehaviour
     */
 
     // Selectable GameObjects
-    public GameObject IPAddress;
-    public GameObject PortNumber;
+    public GameObject[] ListOfGameObjects;
+    private bool isSelectedInList = false;
 
     void Start()
     {
-        if((EventSystem.current.currentSelectedGameObject != IPAddress) && (EventSystem.current.currentSelectedGameObject != PortNumber)) EventSystem.current.SetSelectedGameObject(null);
+        if (ListOfGameObjects.Length != 0)
+        {
+            foreach (GameObject obj in ListOfGameObjects)
+            {
+                if (EventSystem.current.currentSelectedGameObject == obj)
+                {
+                    isSelectedInList = true;
+                    break;
+                }
+            }
+        }
+        if (!isSelectedInList)
+        {
+            EventSystem.current.SetSelectedGameObject(null);
+        }
     }
 
     void Update()
     {
-        if((EventSystem.current.currentSelectedGameObject != IPAddress) && (EventSystem.current.currentSelectedGameObject != PortNumber)) EventSystem.current.SetSelectedGameObject(null);
+        if (ListOfGameObjects.Length != 0)
+        {
+            foreach (GameObject obj in ListOfGameObjects)
+            {
+                if (EventSystem.current.currentSelectedGameObject == obj)
+                {
+                    isSelectedInList = true;
+                    break;
+                }
+            }
+        }
+        if (!isSelectedInList)
+        {
+            EventSystem.current.SetSelectedGameObject(null);
+        }
     }
 }

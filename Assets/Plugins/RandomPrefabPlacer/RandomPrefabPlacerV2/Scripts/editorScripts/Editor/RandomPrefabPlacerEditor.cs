@@ -539,7 +539,7 @@ namespace kawetofe.randomPrefabPlacer
         /// <summary>
         /// Menu Item
         /// </summary>
-        [MenuItem("kawetofe tools/RandomPrefabPlacerV2/RPPBrushTool")]
+        [MenuItem("AutoDRIVE/Terrain Tools/Random Prefab Placer")]
         public static void InstantiateRPPBrushTool()
         {
             GameObject rppBrush = (GameObject)Resources.Load("kawetofe/randomPrefabPlacerV2/RPPBrushTool");

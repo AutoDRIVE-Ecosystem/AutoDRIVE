@@ -5509,6 +5509,21 @@ PrefabInstance:
       propertyPath: PortNumber
       value: 
       objectReference: {fileID: 1589781761}
+    - target: {fileID: 7810280185978483467, guid: d4af2b4ca8bf339409a9f61d7ef42b31,
+        type: 3}
+      propertyPath: ListOfGameObjects.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7810280185978483467, guid: d4af2b4ca8bf339409a9f61d7ef42b31,
+        type: 3}
+      propertyPath: ListOfGameObjects.Array.data[0]
+      value: 
+      objectReference: {fileID: 1589781762}
+    - target: {fileID: 7810280185978483467, guid: d4af2b4ca8bf339409a9f61d7ef42b31,
+        type: 3}
+      propertyPath: ListOfGameObjects.Array.data[1]
+      value: 
+      objectReference: {fileID: 1589781761}
     - target: {fileID: 7810280185978483574, guid: d4af2b4ca8bf339409a9f61d7ef42b31,
         type: 3}
       propertyPath: m_RootOrder
